@@ -1,0 +1,729 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"微软雅黑";
+    font-size: 12px;
+}
+body{
+    background-color: #11171E;
+    width: 1900px;
+    min-width: 1900px;
+    margin: 0px auto;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	}
+.fl{
+    float:left;
+    }
+    
+.fr{
+    float:right;
+    }
+a{
+    text-decoration:none;
+    }
+ul,li{
+    list-style:none;
+    }
+/* 头----------------------------------------------------- */
+.nav-header {
+    z-index: 999;
+	position:relative;
+	z-index:99;
+	height:60px;
+	width:1900px;
+	left:0;
+	top:0;
+	background-color: #11171E;
+}
+.head-contain {
+    width: 100%;
+}
+.top-logo, .top-nav, .top-nav li, .top-right{
+	display:inline-block;
+    vertical-align: middle;	
+}
+.top-nav {
+	margin-left: 570px;
+}
+.top-nav li {
+	line-height:60px;
+	padding-left: 30px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.top-nav li a {
+    text-decoration:none;
+    transition: all .5s;
+	display:block;
+	text-align:center;
+	font-size:16px;
+    font-weight: 550;
+	color:#fff;
+}
+.top-nav li a:hover{
+    color: #FF6835
+}
+.main{
+    background: url(../icon/home-w.png) no-repeat left 16px;
+    background-size: 40%;
+}
+.classify{
+    background: url(../icon/kind-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.news{
+    background: url(../icon/news-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.sales{
+    background: url(../icon/trophy-w.png) no-repeat 0px 17px;
+    background-size: 20%;
+}
+.login{
+    background: url(../icon/user-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+
+.main:hover{
+    background: url(../icon/home-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.classify:hover{
+    background: url(../icon/kind-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.news:hover{
+    background: url(../icon/news-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.sales:hover{
+    background: url(../icon/trophy-o.png) no-repeat 0px 17px;
+    background-size: 20%;
+}
+.login:hover{
+    background: url(../icon/user-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.top-nav ul{
+    position: relative;
+}
+.main::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:11px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.classify::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:96px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.news::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:180px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.sales::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:269px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.login::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:400px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.main:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.classify:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.news:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.sales:hover:after{
+    width:109px;
+    transition:all 0.5s;
+}
+.login:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+
+
+/* 分类 */
+.classify-list{
+    z-index: 999;
+    border-radius: 5px;
+    background-color: rgba(0, 8, 15, 0.5);
+    width: 500px;
+    height: 570px;  
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 10px black;
+    position: absolute;
+    left: 950px;
+    display: none;
+}
+.t-head th{
+    text-indent: 1.4em;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    width: 170px;
+    text-align: left;
+}
+.first{
+    width: 500px;
+
+}
+.first tr{
+    line-height: 30px;
+}
+.first tr td{
+    transition: all .5s;
+    text-indent: 2em;
+}
+.first tr td:hover{
+    background-color: #FF6835;
+}
+.first tr td>a{
+    font-size: 16px;
+    color: white;
+}
+
+
+/* 搜索框 */
+.searchBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;    
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.searchBox.active{
+    width: 340px;
+}
+.searchBox .search{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.searchBox .close{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scale: 0;
+    transition: 0.5s;
+}
+.searchBox.active{
+    border: 1px solid #fff;
+}
+.searchBox.active .close{
+    scale: 1;
+    transition-delay: 0.5s;
+}
+.searchBox .searchinput{
+    position: absolute;
+    left: 60px;
+    width: calc(100% - 80px);
+    height: 100%;
+    line-height: 60px;
+}
+input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none; 
+    font-size: 1.25em;
+    color: #fff;
+    background-color: #11171E;
+}
+input::placeholder{
+    color: lightgray;
+}
+
+/* intro */
+.intro{
+    width: 100%;
+    height: 1080px;
+}
+.heroes{
+    width: 100%;
+    height: 1080px;
+    background: url(../详情页/cyberpunk/1022934.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.heroes2{
+    width: 100%;
+    height: 39px;
+    background: url(../详情页/cyberpunk/razor-top-black.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 分割 */
+.clip{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    position: relative;
+}
+.clip-style{
+    width: 100%;
+    height: 39px;
+    background: url(../详情页/cyberpunk/top-line-yellow-69909c07.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+/* 游戏视频----------------------------------------------------- */
+.background-pic{
+    padding-top: 30px;
+    width: 100%;
+    height: 1080px;
+    /* background: url(../详情页/reddead/background.jpg) no-repeat center; */
+    background-size: cover;
+    position: relative;
+}
+.video-content{
+    width: 1600px;
+    margin: 0 auto;
+}
+.video-content h1{
+    /* border: 1px solid red; */
+    text-shadow: 3px 1px hsl(180, 100%, 50%);
+    /* -1px -2px hsl(50deg, 100%, 60%); */
+    height: 60px;
+    width: 210px;
+    background: url(../详情页/cyberpunk/btn_0_1.svg) no-repeat 0 0;
+    line-height: 50px;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: white;
+}
+.video-content .video{
+    margin-top: 20px;
+    width: 1600px;
+    height: 900px;
+}
+.video-content .video video{
+    width: 1600px;
+    height: 900px;
+}
+.video-bottom{
+    width: 100%;
+    height: 39px;
+    background: url(../详情页/cyberpunk/razor-top-black.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 游戏图片----------------------------------------------------- */
+.pic-content{
+    width: 1600px;
+    height: 900px;
+    margin: 0 auto;
+}
+.pic-content h1{
+    /* border: 1px solid red; */
+    text-shadow: 3px 1px hsl(180, 100%, 50%);
+    /* -1px -2px hsl(50deg, 100%, 60%); */
+    height: 60px;
+    width: 210px;
+    background: url(../详情页/cyberpunk/btn_0_1.svg) no-repeat 0 0;
+    line-height: 50px;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: white;
+}
+.pic-content .pic{
+    margin-top: 20px;
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1600px;
+    margin: 0px auto;
+}
+.photoBox{
+    width: 1600px;
+    height: 900px;
+}
+.banner{
+    width: 1600px;
+    height: 900px;
+    
+}
+.img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    animation: imgAinmation .5s linear;
+    display: none;
+}
+
+.img:first-child{
+    display: flex;
+}
+@keyframes imgAinmation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes hqAnimation {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.img>div>span{
+    z-index: 0;
+    padding-left: 10px;
+    font-size: 17px;
+    animation: hqAnimation .7s ease-out;
+}
+.table{
+    width: 1600px;
+    height: 130px;
+    margin-top: -130px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.boxbtn{
+    width: 160px;
+    height: 90px;
+    position: relative;
+    border: 1px solid none;
+    box-sizing: border-box;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 5px;
+}
+.boxbtn>*{
+    transition: all .2s ease-out;
+}
+.boxbtn>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(1.2)
+}
+.boxbtnHover{
+    border: 4px solid #FFFB01;
+}
+.boxbtnHover>img{
+    margin-left: 0px;
+    transform: scale(1);
+}
+
+
+/* 游戏特色----------------------------------------------------- */
+.feature-page{
+    position: relative;
+}
+.intro-page{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.first-page{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.second-page{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.third-page{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.first-page .clip-frame{
+    background: url(../详情页/cyberpunk/feature.png) no-repeat 350px center;
+    height: 100%;
+    width: 100%;
+    animation: clip-frame 1s;   
+}
+.feature-left{
+    z-index: 99;
+    width: 550px;
+    background-color: #FCEE0A;
+    position: absolute;
+    left: 0;
+    top: 300px;
+    /* padding: 10px; */
+    animation: feature-left 1s;
+}
+.feature-left h1{
+    margin: 0 auto;
+    width: 464px;
+    font-size: 60px;
+    position: relative;
+}
+.feature-left h1:after{
+    background: url(../详情页/cyberpunk/separator-text-c996b8c3.svg) no-repeat;
+    bottom: -10px;
+    content: "";
+    height: 4px;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    width: 464px;
+}
+.feature-left p{
+    margin: 30px auto;
+    width: 464px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+.feature-bottom{
+    width: 550px;
+    height: 30px;
+    background: url(../详情页/cyberpunk/bg_9_1.png) no-repeat; 
+    background-size: cover;
+    position: absolute;
+    bottom: -30px;
+}
+.small-conntent{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+}
+   
+.feature-right{
+    position: relative;
+    width: 369px;
+    /* height: 180px; */
+    /* padding: 2px; */
+    background-color: #FCEE0A;
+}
+.feature-right img{
+    border: 2px solid #FCEE0A;
+    width: 100%;
+    box-sizing: border-box;
+}
+.feature-right p{
+    margin: 0 auto;
+    width: 350px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.feature-right-bottom{
+    width: 369px;
+    height: 9px;
+    background: url(../详情页/cyberpunk/panel-foot.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -9px;
+}
+.no1{
+   animation: feature-right .5s; 
+}
+.no2{
+    animation: feature-right .7s ; 
+}
+.no3{
+    animation: feature-right 1s; 
+}
+@keyframes feature-left {
+    from{
+        transform: translate(-500px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+@keyframes clip-frame {
+    from{
+        transform: translate(2000px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+@keyframes feature-right {
+    from{
+        transform: translateY(500px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+.hide{
+    display: none;
+}
+.intro-page .clip-frame{
+    background: url(../详情页/cyberpunk/intro-feature.png) no-repeat 350px center;
+    height: 1080px;
+    width: 100%;
+    animation: clip-frame 1s;
+}
+.second-page .clip-frame{
+    background: url(../详情页/cyberpunk/feature2.png) no-repeat 350px center;
+    height: 1080px;
+    width: 100%;
+    animation: clip-frame 1s;   
+}
+.third-page .clip-frame{
+    background: url(../详情页/cyberpunk/feature3.png) no-repeat 350px center;
+    height: 1080px;
+    width: 100%;
+    animation: clip-frame 1s;   
+}
+.feature-page-bottom{
+    width: 100%;
+    height: 37px;
+    background: url(../详情页/cyberpunk/top-line-yellow-69909c07.svg) no-repeat 0 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 分割2----------------------------------------------------- */
+.cut{
+    width: 100%;
+    height: 620px;
+    background: url(../详情页/cyberpunk/cut.webp) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+}
+.cut-top{
+    width: 100%;
+    height: 39px;
+    background: url(../详情页/cyberpunk/razor-top-black-upsidedown.png) no-repeat 0 0;
+    background-size: cover;
+}
+.cut-bottom{
+    width: 100%;
+    height: 39px;
+    background: url(../详情页/cyberpunk/razor-top-black.svg) no-repeat 0 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 游戏配置----------------------------------------------------- */
+.configuration{
+    margin-top: 15px;
+    width: 660px;
+    height: 355px;
+    /* border: 1px solid red; */
+}
+.configuration ul li{
+    font-size: 20px;
+    line-height: 35px;
+    color: white;
+}
+.low{
+    margin-left: 90px;
+}
+
+/* 游戏配置----------------------------------------------------- */
+.footer{
+    width: 100%;
+    height: 620px;
+    background: url(../详情页/cyberpunk/footer.webp) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+}

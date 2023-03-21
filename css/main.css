@@ -1,0 +1,1213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"微软雅黑";
+    /* font-size: 12rem; */
+}
+::-webkit-scrollbar{
+    width: 10rem;
+    height: 100%;
+    background-color: #11171E;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 2rem;
+    background-color: #FF6835;
+}
+html{
+    font-size: 1px;
+}
+body{
+    background-color: #11171E;
+    width: 100%;
+    /* min-width: 1900rem; */
+    margin: 0rem auto;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	}
+.fl{
+    float:left;
+    }
+    
+.fr{
+    float:right;
+    }
+a{
+    text-decoration:none;
+    }
+ul,li{
+    list-style:none;
+    }
+/* 头----------------------------------------------------- */
+.nav-header {
+    /* z-index: 999; */
+    margin: 0 auto;	
+    right: 0rem;
+	height:60rem;
+	width:100%;
+	left:0;
+	top:0;
+	background-color: #11171E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-header>div{
+    width: 100%;
+    z-index:99;
+    position:relative;
+}
+.head-contain {
+    width: 1900rem;
+    margin: 0 auto;
+}
+.top-logo{
+    /* position: absolute;
+    left: 0rem; */
+}
+.top-logo, .top-nav, .top-nav li, .top-right{
+	display:inline-block;
+    vertical-align: middle;	
+}
+.top-nav {
+	margin-left: 570rem;
+}
+.top-nav li {
+	line-height:60rem;
+	padding-left: 30rem;
+    margin: 0 10rem 0 10rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+.top-nav li a {
+    transition: all .5s;
+	display:block;
+	text-align:center;
+	font-size:16rem;
+    font-weight: 550;
+	color:#fff;
+}
+.top-nav li a:hover{
+    color: #FF6835
+}
+.main{
+    background: url(../icon/home-w.png) no-repeat left 16rem;
+    background-size: 40%;
+}
+.classify{
+    background: url(../icon/kind-w.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.news{
+    background: url(../icon/news-w.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.sales{
+    background: url(../icon/trophy-w.png) no-repeat 0rem 17rem;
+    background-size: 20%;
+}
+.login{
+    background: url(../icon/user-w.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+
+.main:hover{
+    background: url(../icon/home-o.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.classify:hover{
+    background: url(../icon/kind-o.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.news:hover{
+    background: url(../icon/news-o.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.sales:hover{
+    background: url(../icon/trophy-o.png) no-repeat 0rem 17rem;
+    background-size: 20%;
+}
+.login:hover{
+    background: url(../icon/user-o.png) no-repeat 0rem 16rem;
+    background-size: 40%;
+}
+.top-nav ul{
+    position: relative;
+}
+.main::after{
+    content: '';
+    position:absolute;
+    bottom:0rem;
+    left:11rem;
+    height:2rem;
+    width:0rem;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.classify::after{
+    content: '';
+    position:absolute;
+    bottom:0rem;
+    left:96rem;
+    height:2rem;
+    width:0rem;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.news::after{
+    content: '';
+    position:absolute;
+    bottom:0rem;
+    left:180rem;
+    height:2rem;
+    width:0rem;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.sales::after{
+    content: '';
+    position:absolute;
+    bottom:0rem;
+    left:269rem;
+    height:2rem;
+    width:0rem;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.login::after{
+    content: '';
+    position:absolute;
+    bottom:0rem;
+    left:400rem;
+    height:2rem;
+    width:0rem;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.main:hover:after{
+    width:65rem;
+    transition:all 0.5s;
+}
+.classify:hover:after{
+    width:65rem;
+    transition:all 0.5s;
+}
+.news:hover:after{
+    width:65rem;
+    transition:all 0.5s;
+}
+.sales:hover:after{
+    width:109rem;
+    transition:all 0.5s;
+}
+.login:hover:after{
+    width:65rem;
+    transition:all 0.5s;
+}
+
+
+/* 分类 */
+.classify-list{
+    z-index: 999;
+    border-radius: 5rem;
+    background-color: rgba(0, 8, 15, 0.5);
+    width: 500rem;
+    height: 570rem;  
+    -webkit-backdrop-filter: blur(30rem);
+    backdrop-filter: blur(30rem);
+    box-shadow: 0rem 0rem 10rem black;
+    position: absolute;
+    left: 950rem;
+    display: none;
+}
+.t-head th{
+    text-indent: 1.4em;
+    font-size: 16rem;
+    color: white;
+    font-weight: bold;
+    width: 170rem;
+    text-align: left;
+}
+.first{
+    width: 500rem;
+
+}
+.first tr{
+    line-height: 30rem;
+}
+.first tr td{
+    transition: all .5s;
+    text-indent: 2em;
+}
+.first tr td:hover{
+    background-color: #FF6835;
+}
+.first tr td>a{
+    font-size: 16rem;
+    color: white;
+}
+
+
+/* 搜索框 */
+.searchBox{
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    display: flex;    
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-left: 20rem;
+}
+.searchBox.active{
+    width: 340rem;
+}
+.searchBox .search{
+    position: relative;
+    min-width: 40rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.searchBox .close{
+    position: relative;
+    min-width: 40rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scale: 0;
+    transition: 0.5s;
+}
+.searchBox.active{
+    border: 1rem solid #fff;
+}
+.searchBox.active .close{
+    scale: 1;
+    transition-delay: 0.5s;
+}
+.searchBox .searchinput{
+    position: absolute;
+    left: 60rem;
+    width: calc(100% - 80rem);
+    height: 100%;
+    line-height: 60rem;
+}
+input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none; 
+    font-size: 1.25em;
+    color: #fff;
+    background-color: #11171E;
+}
+input::placeholder{
+    color: lightgray;
+}
+
+
+/* 轮播图----------------------------------------------------- */
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1900rem;
+    min-width: 1200rem;
+    margin: 0rem auto;
+}
+.photoBox{
+    width: 100%;
+    height: 900rem;
+    position: relative;
+    /* top: 60rem; */
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    animation: imgAinmation .5s ease-out;
+    display: none;
+}
+.img:first-child{
+    display: flex;
+}
+@keyframes imgAinmation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.img>div{
+    margin-left: 50rem;
+    z-index: 0;
+    color:white;
+    height: 200rem;
+    margin-bottom: 350rem;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes hqAnimation {
+    from{
+        transform: translateY(50rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+.img>div>span{
+    z-index: 0;
+    padding-left: 10rem;
+    font-size: 17rem;
+    animation: hqAnimation .7s ease-out;
+}
+.table{
+    width: 100%;
+    height: 130rem;
+    margin-top: -131rem;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.boxbtn{
+    width: 190rem;
+    height: 90%;
+    position: relative;
+    border: 4rem solid none;
+    box-sizing: border-box;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20rem;
+    padding-bottom: 20rem;
+    color: white;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 5rem;
+}
+.boxbtn>*{
+    transition: all .2s ease-out;
+}
+.boxbtn>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    transform: scale(1.2)
+}
+.boxbtnHover{
+    border: 3rem solid #005A9E;
+}
+.boxbtnHover>img{
+    margin-left: 0rem;
+    transform: scale(1);
+}
+
+/* 热门------------------------------------------------------- */
+.hot{
+    margin: 50rem auto;
+         
+}
+.hot-content{
+    /* border: 1rem solid red; */
+    width: 1690rem;
+    margin: 0rem auto; 
+    /* height: 580rem; */
+    position: relative;   
+}
+.nwork .hot-content{
+    height: 1080rem;
+}
+.hot-content>p{
+    color: #FF6835;
+    font-weight: bold;
+    font-size: 20rem;
+    padding-left: 45rem;
+    padding-top: 30rem;
+    background: url(../icon/fire-w.png) no-repeat left 13rem;
+    background-size: 2.5%;
+    transition: all .5s;
+}
+.hot-content .game{
+    width: 100%;
+    /* height: 500rem; */
+    margin: 20rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.hot .game{
+    position: relative;
+}
+.game .page1{
+    /* border: 1rem solid blue; */
+    display: block;
+    transition: all .5s;
+    /* position: absolute; */
+    animation: gameCoverShow 1s;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+}
+.game .page2{
+    /* border: 1rem solid blue; */
+    display: block;
+    /* position: absolute; */
+    display: none;
+    animation: gameCoverShow 1s;
+}
+@keyframes gameCoverShow {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.hot-content .game .gamePic{
+    border-radius: 5rem;
+    width: 300rem;
+    height: 450rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 11rem;
+    margin-right: 10rem;
+    margin-top: 20rem;
+}
+.hot-content .game .witcher{
+    background: url(../封面/witcher.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .ResidentEvil2{
+    background: url(../封面/resident\ evil2re.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .gta{
+    background: url(../封面/gta5.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .batman{
+    background: url(../封面/arkham\ kinght.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .tomb{
+    background: url(../封面/tomb2.png) no-repeat center center;
+    background-size: cover;
+}
+
+.page2 .bf2042{
+    background: url(../封面/page2/bf2042.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .cyberpunk2077{
+    background: url(../封面/page2/cyberpunk.jpg) no-repeat center center;
+    background-size: cover;
+}
+.page2 .detroit{
+    background: url(../封面/page2/detroit.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .farcry{
+    background: url(../封面/page2/farcry.jpg) no-repeat center center;
+    background-size: cover;
+}
+.page2 .halocover{
+    background: url(../封面/page2/halocover.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .layersoffear{
+    background: url(../封面/page2/layersoffear.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .metro{
+    background: url(../封面/page2/metro.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .re3{
+    background: url(../封面/page2/re3.png) no-repeat center center;
+    background-size: cover;
+}
+.page2 .titanfall2{
+    background: url(../封面/page2/titanfall2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.page2 .unity{
+    background: url(../封面/page2/unity.png) no-repeat center center;
+    background-size: cover;
+}
+.gamePic .gamePic-details{
+    text-indent: 1em;
+    border-radius: 10rem 10rem 0rem 0rem;
+    width: 300rem;
+    height: 165rem;
+    background-color: rgba(0, 8, 15, 0.5);
+    -webkit-backdrop-filter: blur(10rem);
+    backdrop-filter: blur(10rem);
+    position: absolute;
+    bottom: 0rem;
+    display: none;  
+}
+.switch-btn{
+    margin: 0 auto;
+    border-radius: 10rem;
+    height: 5rem;
+    width: 100rem;
+    background-color: #FF6835;
+    cursor: pointer;
+    transition: all .5s;
+    position: absolute;
+    bottom: -40rem;
+    left: 794rem;
+}
+.switch-btn:hover{
+    transform: scale(1.1);
+}
+.gamePic .gamePic-details{
+    padding-left: 10rem;
+}
+.gamePic .gamePic-details h2{
+    text-align: left;
+    margin-top: 20rem;
+    font-weight: bolder;
+    font-size: 20rem;
+    color: white;
+    /* opacity: 0; */
+    animation: detailsAnimation .3s ease-out;
+}
+.gamePic .gamePic-details>p{
+    text-align: left;
+    margin-top: 15rem;
+    font-size: 13rem;
+    color: white;
+    /* opacity: 0; */
+}
+.gamePic .gamePic-details>.gameType{
+    animation: detailsAnimation .5s ease-out;
+}
+.gamePic .gamePic-details>.gameCompany{
+    animation: detailsAnimation .7s ease-out;
+}
+.gamePic .gamePic-details>.gamePlat{
+    animation: detailsAnimation .9s ease-out;
+}
+@keyframes detailsAnimation {
+    to{
+        transform: translateY(0rem);
+    }
+    from{
+        transform: translateY(80rem);
+    }
+}
+.gamePic .gamePic-details>p>.plat>img{
+    width: 20rem;
+    vertical-align: middle;
+}
+
+
+/* 即将发售------------------------------------------------------- */
+.near{
+    margin-top: 50rem;
+}
+.hot-content>.upcoming{
+    color: #FF6835;
+    font-weight: bold;
+    font-size: 18rem;
+    padding-left: 45rem;
+    padding-top: 30rem;
+    background: url(../icon/loading-w.png) no-repeat left 13rem;
+    background-size: 2.5%;
+    transition: all .5s;
+}
+.hot-content .game .cod{
+    background: url(../封面/new/call\ of\ duty19.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .wukong{
+    background: url(../封面/new/wukong.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .deadSpace{
+    background: url(../封面/new/dead\ space.jpg) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .godofwar{
+    background: url(../封面/new/god\ of\ war2022.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .suicide{
+    background: url(../封面/new/suicide\ squad.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* 近期新作------------------------------------------------------- */
+.nwork{
+    margin-top: 50rem;
+}
+.hot-content>.newWork{
+    color: #FF6835;
+    font-weight: bold;
+    font-size: 18rem;
+    padding-left: 45rem;
+    padding-top: 30rem;
+    background: url(../icon/游戏_game.png) no-repeat left 13rem;
+    background-size: 2.5%;
+    transition: all .5s;
+}
+.hot-content .game .death{
+    background: url(../封面/near/death\ stranding.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .elden{
+    background: url(../封面/near/elden\ ring.jpg) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .f1{
+    background: url(../封面/near/F1\ 22.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .fifa{
+    background: url(../封面/near/FIFA23.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .forza{
+    background: url(../封面/near/forza\ horizon.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .hitman{
+    background: url(../封面/near/hitman.jpg) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .prototype{
+    background: url(../封面/near/prototype.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .redDead{
+    background: url(../封面/near/red\ dead.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .doom{
+    background: url(../封面/near/doom.png) no-repeat center center;
+    background-size: cover;
+}
+.hot-content .game .spider{
+    background: url(../封面/near/spider\ man.png) no-repeat center center;
+    background-size: cover;
+}
+
+/* 推荐------------------------------------------------------- */
+.person{
+    margin-top: 50rem;
+}
+.recommend{
+    /* border: 1rem solid red; */
+    width: 1690rem;
+    margin: 0rem auto;
+
+}
+.recommend>.recommendation{
+    color: #FF6835;
+    font-weight: bold;
+    font-size: 18rem;
+    padding-left: 45rem;
+    padding-top: 30rem;
+    background: url(../icon/handle-w.png) no-repeat left 13rem;
+    background-size: 2.5%;
+    transition: all .5s;
+}
+.recommend .recomment_game{
+    background-color: #16202D;
+    width: 1625rem;
+    margin: 30rem auto;
+    padding: 15rem;
+    position: relative;
+}
+.recomment_game p{
+    color: white;
+}
+.recomment_game .title{
+    font-size: 35rem;
+}
+.recomment_game .sec_title{
+    font-size: 20rem;
+    font-weight: 100;
+}
+.recomment_game .recommend_details{
+    margin-top: 15rem;
+    position: relative;
+    /* border: 1rem solid red; */
+    box-sizing: border-box;
+}
+.recomment_game .game_cover{
+    width: 560rem;
+    height: 315rem;
+    position: relative;    
+    z-index: 1;
+    cursor: pointer
+}
+
+.recomment_game .game_cover,.printscreen{
+    display: inline-block;
+}
+.recomment_game .printscreen{
+    z-index: 0;
+    box-sizing: border-box;
+    /* border: 1rem solid red; */
+    width: 480rem;
+    height: 270rem;
+    background-size: cover;
+    /* position: absolute;
+    left: 500rem;
+    top: 110rem; */
+
+}
+/* red dead */
+.reddead_cover{
+    background: url(../推荐游戏截图/red\ dead.jpg) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .redA{
+    background: url(../推荐游戏截图/red\ dead\ 1.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 600rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .redB{
+    background: url(../推荐游戏截图/red\ dead\ 2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 300rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .redC{
+    background: url(../推荐游戏截图/red\ dead\ 3.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 0rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.reddead_cover:hover{
+    background: url(../推荐游戏截图/RedDeadRedemption.gif) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .redA:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .redB:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .redC:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recomment_game .platform{
+    margin-top: 15rem;
+}
+.recomment_game .platform .recommend_plat>img{
+    height: 30rem;
+    width: 30rem;
+}
+.recomment_game .platform>.ps{
+    margin-left: 15rem;
+}
+.recomment_game .platform>.steam{
+    margin-left: 15rem;
+}
+/* cyberpunk */
+.cyber_cover{
+    background: url(../推荐游戏截图/cyberpunk.jpg) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .cyberA{
+    background: url(../推荐游戏截图/cyberpunk\ 1.png) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 600rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .cyberB{
+    background: url(../推荐游戏截图/cyberpunk2.png) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 300rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .cyberC{
+    background: url(../推荐游戏截图/cyberpunk3.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 0rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.cyber_cover:hover{
+    background: url(../推荐游戏截图/Cyberpunk-2077.gif) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .cyberA:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .cyberB:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .cyberC:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+/* gta5 */
+.gta_cover{
+    background: url(../推荐游戏截图/gta.jpg) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .gtaA{
+    background: url(../推荐游戏截图/gta1.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 600rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .gtaB{
+    background: url(../推荐游戏截图/gta2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 300rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .gtaC{
+    background: url(../推荐游戏截图/gta3.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 0rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.gta_cover:hover{
+    background: url(../推荐游戏截图/GrandTheft\ AutoV.gif) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .gtaA:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .gtaB:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .gtaC:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+/* tomb */
+.tomb_cover{
+    background: url(../推荐游戏截图/tombb.jpg) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .tombA{
+    background: url(../推荐游戏截图/tomb1.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 600rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .tombB{
+    background: url(../推荐游戏截图/tomb2l.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 300rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .tombC{
+    background: url(../推荐游戏截图/tomb2l.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 0rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.tomb_cover:hover{
+    background: url(../推荐游戏截图/Rise-of-the-Tomb-Raider.gif) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .tombA:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .tombB:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .tombC:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+/* witcher */
+.witch_cover{
+    background: url(../推荐游戏截图/witcher.jpg) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .witchA{
+    background: url(../推荐游戏截图/witcher1.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 600rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .witchB{
+    background: url(../推荐游戏截图/witcher2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 300rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.recommend_details .witchC{
+    background: url(../推荐游戏截图/witcher3.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 0rem;
+    top: 20rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.witch_cover:hover{
+    background: url(../推荐游戏截图/witcher.gif) no-repeat center center;
+    background-size: cover;
+}
+.recommend_details .witchA:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .witchB:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+.recommend_details .witchC:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: 0rem 0rem 10rem black;
+}
+
+/* 预告------------------------------------------------------- */
+.preview{
+    /* border: 1rem solid red; */
+    width: 1690rem;
+    margin: 0rem auto;
+    margin-top: 50rem;
+}
+.preview>.prevue{
+    color: #FF6835;
+    font-weight: bold;
+    font-size: 18rem;
+    padding-left: 45rem;
+    padding-top: 30rem;
+    background: url(../icon/game-two.png) no-repeat left 13rem;
+    background-size: 2.5%;
+    transition: all .5s;
+}
+.preview .game_trailer{
+    /* background-color: #16202D; */
+    width: 1625rem;
+    height:297rem;
+    margin: 20rem auto;
+    padding: 15rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.game_trailer .trailer_cover{
+    /* z-index: 99;
+    position: relative; */
+    display: inline-block;
+    cursor: pointer;
+    /* margin: 5rem; */
+}
+.game_trailer .preview_content{
+    box-sizing: border-box;
+    width: 528rem;
+    height:297rem;
+    /* border: 1rem solid blue; */   
+}
+.preview_content .smallVideo{
+    width: 528rem;
+    height:297rem;
+    display: none;
+}
+.trailer_cover{
+    position: relative;
+}
+.trailer_cover.mar{
+    margin-left: 16rem;
+}
+.trailer_title{
+    width: 528rem;
+    height:70rem;
+    background-color: rgba(0, 8, 15, 0.5);
+    -webkit-backdrop-filter: blur(3rem);
+    backdrop-filter: blur(3rem);
+    position: absolute;
+    bottom: 0rem;
+    /* display: none; */
+   
+}
+.trailer_title>h2{
+    text-indent: 10rem;
+    font-size: 20rem;
+    color: white;
+    line-height: 70rem;
+}
+.trailer_title>h2 .play{
+    display: inline-block;
+    width: 25rem;
+    height: 25rem;
+    background: url(../icon/播放_play.png) no-repeat center center;
+    background-size: cover;
+    vertical-align: middle;
+}
+.trailer_btn .nfs22{
+    background: url(../预告/nfs22.jpg) no-repeat center center;
+    background-size: cover;
+}
+.trailer_btn .uncharted{
+    background: url(../预告/uncharted.png) no-repeat center center;
+    background-size: cover;
+}
+.trailer_btn .gow{
+    background: url(../预告/gow.png) no-repeat center center;
+    background-size: cover;
+}
+.trailer_btn .cod19{
+    background: url(../预告/cod19.png) no-repeat center center;
+    background-size: cover;
+}
+.trailer_btn .re4{
+    background: url(../预告/re4.png) no-repeat center center;
+    background-size: cover;
+}
+.trailer_btn .theLastOfUs{
+    background: url(../预告/theLastOfUs.png) no-repeat 0rem 0rem;
+    background-size: cover;
+}
+.trailer_btn .forza{
+    background: url(../预告/forza.jpg) no-repeat 0rem 0rem;
+    background-size: cover;
+}
+.trailer_btn .reddead{
+    background: url(../预告/reddead.jpg) no-repeat 0rem 0rem;
+    background-size: cover;
+}
+.trailer_btn .cyber2077{
+    background: url(../预告/cyberpunk.jpg) no-repeat 0rem 0rem;
+    background-size: cover;
+}
+
+/* video */
+.trailer_btn.active .preview_content{ 
+    transition: 0.5s;
+}
+.clip{
+    opacity: .1;
+    background-color: rgba(17, 23, 30, .9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    width: 100%;
+    height: 101%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: .6s;
+}
+.clip.active{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+.clip video{
+    max-width: 1400rem;
+}
+/* @media (max-width: 991rem){
+    .clip video{
+    max-width: 90%;
+}
+} */
+.clip #back{
+    color: #FF6835;
+    position: absolute;
+    top: 30rem;
+    right: 30rem;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 30rem;
+}
+

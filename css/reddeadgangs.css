@@ -1,0 +1,864 @@
+
+.line {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/game_img/bg.jpg");
+  text-align: center;
+}
+.line h2 {
+  padding-top: 50px;
+  color: white;
+}
+.game_img_list {
+  width: 100%;
+  background-image: url("../img/game_img/bg.jpg");
+  background-size: cover;
+}
+.game_img_list .game_img_box:nth-child(1) {
+  margin-top: 0;
+}
+.game_img_list .game_img_box {
+  width: 97vw;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.game_img_list .game_img_box a {
+  display: block;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(19, 18, 18, 0.7);
+  border: 1px solid rgba(218, 102, 98, 0.2);
+}
+.game_img_list .game_img_box a img {
+  width: 100%;
+  border-radius: 2px;
+  vertical-align: top;
+}
+.top_bar {
+  position: fixed;
+  width: 100%;
+  line-height: 40px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+.top_bar .left_menu {
+  height: 40px;
+}
+.top_bar .left_menu .left_menu_icon {
+  position: relative;
+  width: 2rem;
+  height: 40px;
+}
+.top_bar .left_menu .left_menu_icon li {
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transform-origin: left center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0 auto;
+  transition: 0.5s all;
+}
+.top_bar .left_menu .left_menu_icon li:nth-child(1) {
+  top: 12px;
+}
+.top_bar .left_menu .left_menu_icon li:nth-child(2) {
+  top: 19px;
+}
+.top_bar .left_menu .left_menu_icon li:nth-child(3) {
+  top: 26px;
+}
+.top_bar .left_menu .eject_nav {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 40px;
+  bottom: 0;
+  z-index: 5;
+  width: 40%;
+  box-shadow: 0 0 15px rgba(0, 0, 0.1);
+  text-align: center;
+  background-image: url('../img/redemption2/eject_div.png');
+  background-size: 100%;
+}
+.top_bar .left_menu .eject_nav li {
+  position: relative;
+}
+.top_bar .left_menu .eject_nav li a {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  position: absolute;
+  z-index: 6;
+  top: 20px;
+  color: white;
+}
+.top_bar .left_menu .eject_nav li:nth-child(1) {
+  top: 25px;
+}
+.top_bar .left_menu .eject_nav li:nth-child(2) {
+  top: 75px;
+}
+.top_bar .left_menu .eject_nav li:nth-child(3) {
+  top: 150px;
+}
+.top_bar .left_menu .eject_nav li:nth-child(4) {
+  top: 200px;
+}
+.top_bar .left_menu .eject_nav li:nth-child(5) {
+  top: 250px;
+}
+.top_bar .left_menu .eject_nav li:nth-child(6) {
+  top: 300px;
+}
+.top_bar h1 {
+  font-size: 0.875rem;
+  color: white;
+  padding-left: 0.5rem;
+}
+.top_bar .shopping {
+  background-image: url(../img/redemption2/top_shopping.png);
+  background-repeat: no-repeat;
+  background-position: 80%;
+  color: #000;
+  line-height: 37px;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+.top_bar .shopping a {
+  display: block;
+  height: 100%;
+}
+.gangs_box {
+  background: url("../img/gangs_img/gangs.jpg");
+}
+.gangs_box .animai_list {
+  width: 95%;
+  margin: 0 auto;
+}
+.gangs_box .animai_list img {
+  width: 100%;
+}
+.gangs_box .animai_list2 {
+  width: 95%;
+  margin: 0 auto;
+  overflow: auto;
+}
+.gangs_box .animai_list2 .list_animai {
+  width: 100%;
+  display: flex;
+}
+.gangs_box .animai_list2 .list_animai img {
+  width: 17rem;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.gangs_box .video_list {
+  width: 100%;
+}
+.gangs_box .arms_introduce_list {
+  width: 100%;
+}
+.gangs_box .arms_introduce_list .arms_introduce {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+.gangs_box .arms_introduce_list .arms_introduce a {
+  width: 100%;
+}
+.gangs_box .arms_introduce_list .arms_introduce a img {
+  width: 100%;
+  background-size: cover;
+  transition: all 1s;
+}
+.gangs_box .arms_introduce_list .arms_introduce p {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 14px;
+}
+.gangs_box .cover_arms2 {
+  width: 16.5rem;
+  height: 30rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.gangs_box .cover_arms2 p {
+  color: white;
+  font-size: 16px;
+}
+.gangs_box .cover_arms2 h2:nth-child(1) {
+  margin-top: 50px;
+}
+.gangs_box .cover_arms2 h2 {
+  color: white;
+  font-size: 1.625rem;
+  margin: 10px 0;
+}
+.gangs_box .cover_arms2 .bottom_icon {
+  position: relative;
+}
+.gangs_box .cover_arms2 .bottom_icon i {
+  color: #ffffff;
+  display: block;
+  height: 30px;
+  font-size: 1.25rem;
+  animation: bottom_icon 2s infinite;
+  position: absolute;
+  left: 49%;
+  z-index: 11;
+}
+.gangs_box .cover_arms2 .sszy_gif_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.gangs_box .cover_arms2 .sszy_gif_box a {
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 100%;
+}
+.gangs_box .cover_arms2 .sszy_gif_box a img {
+  width: 100%;
+  border-radius: 10px;
+}
+.gangs_box .cover_arms {
+  width: 16.5rem;
+  height: 15rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.gangs_box .cover_arms p {
+  color: white;
+  font-size: 16px;
+}
+.gangs_box .cover_arms h2:nth-child(1) {
+  margin-top: 50px;
+}
+.gangs_box .cover_arms h2 {
+  color: white;
+  font-size: 1.625rem;
+  margin: 10px 0;
+}
+.gangs_box .cover_arms .bottom_icon {
+  position: relative;
+}
+.gangs_box .cover_arms .bottom_icon i {
+  color: #ffffff;
+  display: block;
+  height: 30px;
+  font-size: 1.25rem;
+  animation: bottom_icon 2s infinite;
+  position: absolute;
+  left: 49%;
+  z-index: 11;
+}
+.gangs_box .arms_img {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(145, 3, 3, 0.3);
+}
+.gangs_box .arms_img img {
+  width: 100%;
+  vertical-align: top;
+}
+.gangs_box .gangs_cover {
+  width: 16.5rem;
+  height: 15rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.gangs_box .gangs_cover p {
+  color: white;
+  font-size: 18px;
+}
+.gangs_box .gangs_cover h2:nth-child(1) {
+  margin-top: 50px;
+}
+.gangs_box .gangs_cover h2 {
+  color: white;
+  font-size: 1.625rem;
+  margin: 10px 0;
+}
+.gangs_box .gangs_cover .bottom_icon {
+  position: relative;
+}
+.gangs_box .gangs_cover .bottom_icon i {
+  color: white;
+  display: block;
+  height: 30px;
+  font-size: 1.25rem;
+  animation: bottom_icon 2s infinite;
+  position: absolute;
+  left: 49%;
+}
+.gangs_box .gangs_people {
+  width: 100%;
+}
+.gangs_box .gangs_people .item {
+  width: 100%;
+  height: 26.75rem;
+  position: relative;
+}
+.gangs_box .gangs_people .item .gangs_background {
+  display: none;
+}
+.gangs_box .gangs_people .item .phone_gangs_people {
+  width: 100%;
+}
+.gangs_box .gangs_people .item .phone_gangs_people img {
+  vertical-align: top;
+}
+.gangs_box .gangs_people .item .phone_gangs_people img {
+  width: 100%;
+  height: 26.75rem;
+  background-size: 100%;
+}
+.gangs_box .gangs_people .item .gangs_name {
+  line-height: 30px;
+  height: 30px;
+  display: block;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 15px;
+}
+.gangs_box .gangs_people .item .gangs_saying {
+  display: block;
+  width: 12.5rem;
+  text-align: center;
+  text-shadow: 2px 2px #000, 0 0 2px #000;
+  margin: 0 auto;
+  font-size: 26px;
+  color: white;
+  position: absolute;
+  bottom: 190px;
+  right: 0;
+}
+.gangs_box .gangs_people .item .introduce {
+  background-image: url("../img/gangs_img/title_background.png");
+  width: 100%;
+  height: 125px;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+.gangs_box .gangs_people .item .introduce p {
+  display: block;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  font-size: 17px;
+  text-shadow: 2px 2px #000, 0 0 2px #000;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  overflow: hidden;
+  background: url(../img/redemption2/footer_img1.jpg);
+  background-size: cover;
+  position: relative;
+  bottom: 0;
+}
+.footer .footer_div1 {
+  width: 100%;
+}
+.footer .footer_div1 img {
+  background-size: cover;
+}
+.footer .footer_div2 {
+  width: 100%;
+  text-align: center;
+}
+.footer .footer_div2 .title_p1 {
+  font-size: 2.25rem;
+  color: white;
+  box-shadow: 0 0px 1px #f39797;
+}
+.footer .footer_div2 .title_p2 {
+  font-size: 1rem;
+  color: white;
+  margin: 20px 0;
+}
+.footer .bottom_icon {
+  width: 100%;
+  height: 380px;
+  box-sizing: border-box;
+  background-image: url("../img/redemption2/footer_img3.png");
+  background-size: cover;
+  padding-top: 80px;
+}
+.footer .bottom_icon .title_p3 {
+  display: block;
+  text-align: center;
+  font-size: 1.75rem;
+  color: #e9e787;
+}
+.footer .bottom_icon .title_p4 {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: white;
+}
+.footer .bottom_icon .bottom_sub {
+  text-align: center;
+}
+.footer .bottom_icon .bottom_sub a {
+  display: block;
+  width: 6.75rem;
+  background: red;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: white;
+  font-size: 0.375rem;
+  line-height: 36px;
+  border-radius: 0.125rem;
+  box-shadow: 0 0 20px rgba(218, 102, 98, 0.644);
+}
+.footer .bottom_icon .sub_icon {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.footer .bottom_icon .sub_icon a {
+  display: block;
+  width: 100px;
+  line-height: 50px;
+}
+.footer .bottom_icon .sub_icon a:nth-child(1) {
+  color: white;
+}
+.footer .bottom_icon .sub_icon a:nth-child(2) {
+  color: white;
+}
+.footer .bottom_icon .sub_icon a:nth-child(3) {
+  color: white;
+}
+.footer .bottom_icon .sub_icon a:nth-child(4) {
+  color: white;
+}
+.footer .bottom_icon .sub_icon a:nth-child(5) {
+  color: white;
+}
+.footer .bottom_icon .footer_level {
+  width: 7.5rem;
+  height: 82px;
+  margin-top: 20px;
+  position: absolute;
+  left: 10vw;
+}
+.footer .bottom_icon .footer_logo {
+  width: 3.5rem;
+  height: 42px;
+  margin: 30px auto;
+  margin-left: 270px;
+}
+@keyframes bottom_icon {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: -40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  @keyframes bottom_icon {
+    from {
+      bottom: 150px;
+    }
+    to {
+      bottom: -50px;
+    }
+  }
+  .video_list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .video_list video {
+    width: 900px;
+  }
+  .line h2 {
+    font-size: 25px;
+    padding-top: 45px;
+  }
+  .game_img_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game_img_list .game_img_box:nth-child(1) {
+    margin-top: 20px;
+  }
+  .game_img_list .game_img_box {
+    width: 500px;
+    height: 281px;
+    margin-top: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(219, 200, 200, 0.2);
+    margin-top: 20px;
+  }
+  .game_img_list .game_img_box a {
+    transition: all 2s;
+    border: 0;
+  }
+  .game_img_list .game_img_box a:hover {
+    transform: scale(2, 2);
+    filter: grayscale(70%);
+  }
+  .gangs_box .animai_list2 {
+    width: 100%;
+    overflow: hidden;
+  }
+  .gangs_box .animai_list2 .list_animai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .gangs_box .animai_list2 .list_animai img {
+    width: 400px;
+    margin: 20px;
+    transition: all 0.5s;
+  }
+  .gangs_box .animai_list2 .list_animai img:hover {
+    transform: scale(1.1, 1.1);
+    filter: grayscale(30%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  }
+  .gangs_box #animai_h3 {
+    font-size: 40px;
+  }
+  .gangs_box .animai_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .gangs_box .animai_list img {
+    width: 300px;
+    margin-top: 20px;
+    transition: all 0.5s;
+  }
+  .gangs_box .animai_list img:hover {
+    transform: scale(1.1, 1.1);
+    filter: grayscale(40%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  }
+  .gangs_box .cover_arms {
+    height: 600px;
+    width: 50%;
+  }
+  .gangs_box .cover_arms h2 {
+    font-size: 40px;
+  }
+  .gangs_box .cover_arms p {
+    font-size: 22px;
+  }
+  .gangs_box .cover_arms .bottom_icon i {
+    font-size: 40px;
+  }
+  .gangs_box .cover_arms2 {
+    height: 800px;
+  }
+  .gangs_box .cover_arms2 h2 {
+    font-size: 40px;
+  }
+  .gangs_box .cover_arms2 p {
+    font-size: 20px;
+  }
+  .gangs_box .cover_arms2 .bottom_icon i {
+    font-size: 50px;
+  }
+  .gangs_box .arms_introduce_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gangs_box .arms_introduce_list .arms_introduce {
+    width: 400px;
+  }
+  .gangs_box .arms_introduce_list .arms_introduce p {
+    font-size: 25px;
+  }
+  .gangs_box .arms_introduce_list .arms_introduce img:hover {
+    transform: scale(1.1, 1.1);
+    filter: grayscale(10%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  }
+  .gangs_box #pc,
+  .gangs_box #arms_video {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .gangs_box .gangs_cover {
+    widows: 700px;
+    height: 700px;
+  }
+  .gangs_box .gangs_cover h2 {
+    font-size: 40px;
+  }
+  .gangs_box .gangs_cover p {
+    font-size: 25px;
+  }
+  .gangs_box .gangs_cover .bottom_icon {
+    height: 100px;
+    position: relative;
+  }
+  .gangs_box .gangs_cover .bottom_icon i {
+    font-size: 35px;
+    animation: bottom_icon 2s infinite;
+    position: absolute;
+    left: 49%;
+  }
+  .gangs_box .gangs_people {
+    width: 100%;
+    overflow: hidden;
+  }
+  .gangs_box .gangs_people .item {
+    width: 100%;
+    height: 1000px;
+  }
+  .gangs_box .gangs_people .item .gangs_background {
+    width: 100%;
+    height: 1100px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  .gangs_box .gangs_people .item .gangs_background img {
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+  }
+  .gangs_box .gangs_people .item .gangs_background .gangs_people {
+    width: 100%;
+  }
+  .gangs_box .gangs_people .item .gangs_background .gangs_people img {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    height: 1100px;
+    width: auto;
+    transition: all 5s;
+  }
+  .gangs_box .gangs_people .item .gangs_background .gangs_people img:hover {
+    transform: scale(1.2, 1.2);
+    filter: grayscale(70%);
+  }
+  .gangs_box .gangs_people .item .phone_gangs_people {
+    display: none;
+  }
+  .gangs_box .gangs_people .item .gangs_name {
+    font-size: 40px;
+    left: 70%;
+    top: 45%;
+  }
+  .gangs_box .gangs_people .item .gangs_saying {
+    font-size: 40px;
+    position: absolute;
+    bottom: 60%;
+    transition: all 2s;
+  }
+  .gangs_box .gangs_people .item .gangs_saying:hover {
+    color: #9b8383;
+    text-shadow: 2px 2px #000, 0 0 2px #000;
+    font-size: 42px;
+  }
+  .gangs_box .gangs_people .item .introduce p {
+    font-size: 20px;
+    position: absolute;
+    top: 70px;
+  }
+  .cover {
+    display: none;
+  }
+  .top_bar_container {
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+  }
+  .top_bar_container .top_bar {
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+  }
+  .top_bar_container .top_bar .left_menu {
+    order: 2;
+    display: flex;
+  }
+  .top_bar_container .top_bar .left_menu .left_menu_icon {
+    display: none;
+  }
+  .top_bar_container .top_bar .left_menu .eject_nav {
+    display: flex !important;
+    position: static;
+    justify-content: space-between;
+    width: 700px;
+  }
+  .top_bar_container .top_bar .left_menu .eject_nav li {
+    position: static;
+  }
+  .top_bar_container .top_bar .left_menu .eject_nav li a {
+    position: static;
+    font-size: 25px;
+    transition: all 0.4s;
+  }
+  .top_bar_container .top_bar .left_menu .eject_nav li a:hover {
+    color: #cc0000;
+  }
+  .top_bar_container .top_bar h1 {
+    display: block;
+    line-height: 60px;
+    font-size: 0.375rem;
+    order: 1;
+    padding-left: 10px;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .top_bar_container .top_bar h1:hover {
+    transform: translatey(-1px);
+    transform: rotate(-5deg);
+    color: #cc0000;
+  }
+  .top_bar_container .top_bar h1:hover::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 105%;
+    top: 25px;
+    background-image: url('../img/redemption2/logo.ico');
+    background-size: cover;
+    transform: rotate(5deg);
+  }
+  .top_bar_container .top_bar .shopping {
+    width: 156px;
+    background-size: 130%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    box-sizing: border-box;
+    order: 3;
+  }
+  .top_bar_container .top_bar .shopping a {
+    transition: all 0.5s;
+  }
+  .top_bar_container .top_bar .shopping > a:hover {
+    color: white;
+    transform: translatex(2px);
+  }
+  .footer {
+    height: 950px;
+  }
+  .footer .footer_div2 .title_p1 {
+    font-size: 45px;
+  }
+  .footer .footer_div2 .title_p2 {
+    font-size: 80px;
+    transition: all 3s;
+  }
+  .footer .footer_div2 .title_p2:hover {
+    color: #000000;
+  }
+  .footer .bottom_icon {
+    height: 900px;
+  }
+  .footer .bottom_icon .title_p3 {
+    margin-top: 100px;
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .footer .bottom_icon .title_p3:hover {
+    color: #dbb73f;
+  }
+  .footer .bottom_icon .title_p4 {
+    font-size: 25px;
+  }
+  .footer .bottom_icon .bottom_sub a {
+    line-height: 50px;
+    margin-top: 30px;
+    width: 200px;
+    font-size: 17px;
+    transition: all 0.3s;
+  }
+  .footer .bottom_icon .bottom_sub a:hover {
+    color: #000000;
+    font-size: 20px;
+  }
+  .footer .bottom_icon .sub_icon {
+    justify-content: center;
+  }
+  .footer .bottom_icon .sub_icon a {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .footer .bottom_icon .sub_icon a:hover {
+    color: #ff0000;
+    transform: rotateZ(360deg);
+    transition: all 1s;
+  }
+  .footer .bottom_icon .footer_level {
+    width: 300px;
+    margin-left: 50px;
+  }
+  .footer .bottom_icon .footer_logo {
+    width: 200px;
+    margin: 0 auto;
+    margin-right: 250px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .top_bar_container .top_bar h1 {
+    font-size: 20px;
+  }
+  .top_bar_container .eject_nav {
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .video_list {
+    width: 100%;
+  }
+  .video_list video {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=./dbg_gangs.css.map */

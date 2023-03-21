@@ -1,0 +1,712 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"微软雅黑";
+    font-size: 12px;
+}
+body{
+    background-color: #11171E;
+    width: 1900px;
+    min-width: 1900px;
+    margin: 0px auto;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	}
+.fl{
+    float:left;
+    }
+    
+.fr{
+    float:right;
+    }
+a{
+    text-decoration:none;
+    }
+ul,li{
+    list-style:none;
+    }
+/* 头----------------------------------------------------- */
+.nav-header {
+    z-index: 999;
+	position:relative;
+	z-index:99;
+	height:60px;
+	width:1900px;
+	left:0;
+	top:0;
+	background-color: #11171E;
+}
+.head-contain {
+    width: 100%;
+}
+.top-logo, .top-nav, .top-nav li, .top-right{
+	display:inline-block;
+    vertical-align: middle;	
+}
+.top-nav {
+	margin-left: 570px;
+}
+.top-nav li {
+	line-height:60px;
+	padding-left: 30px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.top-nav li a {
+    text-decoration:none;
+    transition: all .5s;
+	display:block;
+	text-align:center;
+	font-size:16px;
+    font-weight: 550;
+	color:#fff;
+}
+.top-nav li a:hover{
+    color: #FF6835
+}
+.main{
+    background: url(../icon/home-w.png) no-repeat left 16px;
+    background-size: 40%;
+}
+.classify{
+    background: url(../icon/kind-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.news{
+    background: url(../icon/news-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.sales{
+    background: url(../icon/trophy-w.png) no-repeat 0px 17px;
+    background-size: 20%;
+}
+.login{
+    background: url(../icon/user-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+
+.main:hover{
+    background: url(../icon/home-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.classify:hover{
+    background: url(../icon/kind-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.news:hover{
+    background: url(../icon/news-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.sales:hover{
+    background: url(../icon/trophy-o.png) no-repeat 0px 17px;
+    background-size: 20%;
+}
+.login:hover{
+    background: url(../icon/user-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.top-nav ul{
+    position: relative;
+}
+.main::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:11px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.classify::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:96px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.news::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:180px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.sales::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:269px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.login::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:400px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.main:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.classify:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.news:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.sales:hover:after{
+    width:109px;
+    transition:all 0.5s;
+}
+.login:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+
+
+/* 分类 */
+.classify-list{
+    z-index: 999;
+    border-radius: 5px;
+    background-color: rgba(0, 8, 15, 0.5);
+    width: 500px;
+    height: 570px;  
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 10px black;
+    position: absolute;
+    left: 950px;
+    display: none;
+}
+.t-head th{
+    text-indent: 1.4em;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    width: 170px;
+    text-align: left;
+}
+.first{
+    width: 500px;
+
+}
+.first tr{
+    line-height: 30px;
+}
+.first tr td{
+    transition: all .5s;
+    text-indent: 2em;
+}
+.first tr td:hover{
+    background-color: #FF6835;
+}
+.first tr td>a{
+    font-size: 16px;
+    color: white;
+}
+
+
+/* 搜索框 */
+.searchBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;    
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.searchBox.active{
+    width: 340px;
+}
+.searchBox .search{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.searchBox .close{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scale: 0;
+    transition: 0.5s;
+}
+.searchBox.active{
+    border: 1px solid #fff;
+}
+.searchBox.active .close{
+    scale: 1;
+    transition-delay: 0.5s;
+}
+.searchBox .searchinput{
+    position: absolute;
+    left: 60px;
+    width: calc(100% - 80px);
+    height: 100%;
+    line-height: 60px;
+}
+input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none; 
+    font-size: 1.25em;
+    color: #fff;
+    background-color: #11171E;
+}
+input::placeholder{
+    color: lightgray;
+}
+
+/* intro图----------------------------------------------------- */
+.intro{
+    /* margin-top: 10px; */
+    /* border: 1px solid blue; */
+}
+.heroes{
+    width: 100%;
+    height: 800px;
+    background: url(../详情页/reddead/head.jpg) no-repeat center;
+    background-size: cover;
+}
+.heroes2{
+    width: 100%;
+    height: 256px;
+    background: url(../详情页/reddead/headbottom.jpg) no-repeat center;
+    background-size: cover;
+}
+.heroes-text{
+    width: 700px;
+    margin: 0 auto;
+}
+.heroes-text p{
+    font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+    line-height: 30px;
+    font-size: 25px;
+    text-align: center;
+    width: 700px;
+    color: white;
+}
+/* 游戏视频----------------------------------------------------- */
+.background-pic{
+    padding-top: 50px;
+    width: 100%;
+    height: 1080px;
+    background: url(../详情页/reddead/background.jpg) no-repeat center;
+    background-size: cover;
+}
+.video-content{
+    width: 1600px;
+    margin: 0 auto;
+}
+.video-content h1{
+    font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+    line-height: 30px;
+    font-size: 30px;
+    color: #EE0000;
+}
+.video-content .video{
+    margin-top: 20px;
+    width: 1600px;
+    height: 900px;
+}
+.video-content .video video{
+    width: 1600px;
+    height: 900px;
+}
+
+/* 游戏图片----------------------------------------------------- */
+.pic-content{
+    width: 1600px;
+    height: 900px;
+    margin: 0 auto;
+}
+.pic-content h1{
+    font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+    line-height: 30px;
+    font-size: 30px;
+    color: #EE0000;
+}
+.pic-content .pic{
+    margin-top: 20px;
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1600px;
+    margin: 0px auto;
+}
+.photoBox{
+    width: 1600px;
+    height: 900px;
+}
+.banner{
+    width: 1600px;
+    height: 900px;
+    
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    animation: imgAinmation 1s ease-out;
+    display: none;
+    transition: all 5s;
+}
+.img:hover{
+    transform: scale(1.1);
+}
+.img:first-child{
+    display: flex;
+}
+@keyframes imgAinmation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.img>div{
+    margin-left: 50px;
+    z-index: 0;
+    color:white;
+    height: 200px;
+    margin-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes hqAnimation {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.img>div>span{
+    z-index: 0;
+    padding-left: 10px;
+    font-size: 17px;
+    animation: hqAnimation .7s ease-out;
+}
+.table{
+    width: 1600px;
+    height: 130px;
+    margin-top: -130px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.boxbtn{
+    width: 160px;
+    height: 90px;
+    position: relative;
+    border: 1px solid none;
+    box-sizing: border-box;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 5px;
+}
+.boxbtn>*{
+    transition: all .2s ease-out;
+}
+.boxbtn>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(1.2)
+}
+.boxbtnHover{
+    border: 4px solid #EE0000;
+}
+.boxbtnHover>img{
+    margin-left: 0px;
+    transform: scale(1);
+}
+
+/* 范德林帮派 */
+.VanDerLinde{
+    margin-top: 20px;
+    width: 1600px;
+    height: 900px;
+    overflow: auto;    
+}
+.VanDerLinde::-webkit-scrollbar-track {
+    display:none
+}
+.VanDerLinde::-webkit-scrollbar {
+    width: 7px;
+}
+.VanDerLinde::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: #EE0000;
+}
+
+.VanDerLinde .character{
+    width: 100%;
+    height: 100%;
+}
+.Dutch{
+    background: url(../详情页/reddead/gang\ \(1\).png) no-repeat center center;
+    background-size: cover;
+}
+.Hosea{
+    background: url(../详情页/reddead/gang\ \(2\).png) no-repeat center center;
+    background-size: cover;
+}
+.Molly{
+    background: url(../详情页/reddead/gang\ \(3\).png) no-repeat center center;
+    background-size: cover;
+}
+.Susan{
+    background: url(../详情页/reddead/gang\ \(4\).png) no-repeat center center;
+    background-size: cover;
+}
+.Pearson{
+    background: url(../详情页/reddead/gang\ \(5\).png) no-repeat center center;
+    background-size: cover;
+}
+.Micah{
+    background: url(../详情页/reddead/gang\ \(6\).png) no-repeat center center;
+    background-size: cover;
+}
+.Charles{
+    background: url(../详情页/reddead/gang\ \(7\).png) no-repeat center center;
+    background-size: cover;
+}
+.Bill{
+    background: url(../详情页/reddead/gang\ \(8\).png) no-repeat center center;
+    background-size: cover;
+}
+.Leopold{
+    background: url(../详情页/reddead/gang\ \(9\).png) no-repeat center center;
+    background-size: cover;
+}
+.John{
+    background: url(../详情页/reddead/gang\ \(10\).png) no-repeat center center;
+    background-size: cover;
+}
+.Abigail{
+    background: url(../详情页/reddead/gang\ \(11\).png) no-repeat center center;
+    background-size: cover;
+}
+.Jack{
+    background: url(../详情页/reddead/gang\ \(12\).png) no-repeat center center;
+    background-size: cover;
+}
+.Karen{
+    background: url(../详情页/reddead/gang\ \(13\).png) no-repeat center center;
+    background-size: cover;
+}
+.javier{
+    background: url(../详情页/reddead/gang\ \(14\).png) no-repeat center center;
+    background-size: cover;
+}
+.Tilly{
+    background: url(../详情页/reddead/gang\ \(15\).png) no-repeat center center;
+    background-size: cover;
+}
+.Uncle{
+    background: url(../详情页/reddead/gang\ \(16\).png) no-repeat center center;
+    background-size: cover;
+}
+.Mary-Beth{
+    background: url(../详情页/reddead/gang\ \(17\).png) no-repeat center center;
+    background-size: cover;
+}
+.Lenny{
+    background: url(../详情页/reddead/gang\ \(18\).png) no-repeat center center;
+    background-size: cover;
+}
+.Josiah{
+    background: url(../详情页/reddead/gang\ \(19\).png) no-repeat center center;
+    background-size: cover;
+}
+.Reverend{
+    background: url(../详情页/reddead/gang\ \(20\).png) no-repeat center center;
+    background-size: cover;
+}
+.Sean{
+    background: url(../详情页/reddead/gang\ \(21\).png) no-repeat center center;
+    background-size: cover;
+}
+.Sadie{
+    background: url(../详情页/reddead/gang\ \(22\).png) no-repeat center center;
+    background-size: cover;
+}
+.Arthur{
+    background: url(../详情页/reddead/gang\ \(23\).png) no-repeat center center;
+    background-size: cover;
+}
+
+/* 游戏特色 */
+.feature{
+    margin-top: 20px;
+    width: 1600px;
+    height: 360px;
+    /* border: 1px solid red;     */
+}
+.feature-cover{
+    width: 640px;
+    height: 360px;
+    background-size: cover;
+}
+.feature-text{
+    margin-top: 100px;
+    width: 950px;
+    height: 140px;
+    /* border: 1px solid red;    */
+}
+.feature-text>p{
+    color: white;
+    font-size: 20px;
+    line-height: 35px;
+}
+.cover1{
+    background: url(../详情页/reddead/feature1.png) no-repeat center center;  
+}
+.cover2{
+    background: url(../详情页/reddead/fearure2.png) no-repeat center center;
+}
+.cover3{
+    background: url(../详情页/reddead/feature3.png) no-repeat center center;
+}
+.cover4{
+    background: url(../详情页/reddead/feature4.png) no-repeat center center;
+}
+
+/* 游戏配置 */
+.configuration-intro{
+    width: 100%;
+    height: 620px;
+    background: url(../详情页/reddead/hero.webp);
+}
+.configuration-intro .frame{
+    width: 100%;
+    height: 620px;
+    background: url(../详情页/reddead//kuang.png);
+}
+.configuration{
+    margin-top: 30px;
+    width: 660px;
+    height: 355px;
+    /* border: 1px solid red; */
+}
+.configuration ul li{
+    
+    font-size: 20px;
+    line-height: 35px;
+    color: white;
+}
+.low{
+    margin-left: 90px;
+}
+/* .high{
+    margin-right: 0px;
+} */
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 420px;
+    background: url(../详情页/reddead/bottom-red.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.footer-middel{
+    position: absolute;
+    bottom: -325px;
+    width: 100%;
+    height: 420px;
+    background: url(../详情页/reddead/bottom.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footer-top{
+    width: 100%;
+    height: 100px;
+    background: url(../详情页/reddead/bottom-top.png) no-repeat center center;
+    background-size: cover;
+}
+.footer span{
+    font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+    font-weight: bolder;
+    display: block;
+    font-size: 150px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 130px;
+    right: 650px;
+}
+.footer_level{
+    width:300px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.footer_logo{
+    width:200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

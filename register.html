@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./ico.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="background">
+        <video autoplay loop>
+            <source src="video/【GMV】- GAME OVER_4K_60fps 00_00_10-00_04_13.mp4" type="video/mp4">
+        </video>
+
+        <div class="container">
+            <div class="card">
+                <div class="inner-box" id="card">
+                    <div class="card-front">
+                        <div class="logo"></div>
+                        <h2>登录</h2>
+                        <form>
+                            <input type="text" class="input-box" placeholder="请输入邮箱/用户名/手机号">
+                            <input type="password" class="input-box" placeholder="请输入密码">
+                            <button type="submit" class="submit-btn">登录</button>
+                            <input type="checkbox"><span>记住密码</span>
+                        </form>
+                        <button type="button" class="btn" onclick="openRegister()">没有账号</button>
+                        <a href="">忘记密码</a>
+                        <!-- <button id="volDn">666</button> -->
+                    </div>
+                    <div class="card-back">
+                        <div class="logo"></div>
+                        <h2>注册</h2>
+                        <form>
+                            <input type="text" class="input-box" placeholder="请输入用户名">
+                            <input type="text" class="input-box" placeholder="请输入邮箱/用户名/手机号">
+                            <input type="password" class="input-box" placeholder="请输入密码">
+                            <button type="submit" class="submit-btn">注册</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openLogin()">已有账号</button>
+                        <!-- <a href="">忘记密码</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/jquery-3.6.1.js"></script>
+<script>
+    // $(function () {
+    //     var card = $('#card');
+    //     $('.card-front form submit-btn').click(function () {
+    //         card.css({
+    //             transform: 'rotate(-180deg)'
+    //         })
+    //     })
+
+    //     $('.card-back form submit-btn').click(function () {
+    //         card.css({
+    //             transform: 'rotate(0deg)'
+    //         })
+    //     })
+    // })
+    var card = document.getElementById('card');
+    function openRegister() {
+        card.style.transform = 'rotateY(-180deg)';
+    }
+    function openLogin() {
+        card.style.transform = 'rotateY(0deg)';
+    }
+</script>
+
+</html>

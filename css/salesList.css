@@ -1,0 +1,689 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,
+body,
+   .slider,
+   .slide,
+   .bg{
+	 margin: 0px auto;
+	 width: 1920px;
+     min-width: 1900px;
+	 height: 100%;
+	 overflow: hidden;        
+}
+body{
+    background-color: #000;
+}   
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.fl{
+    float:left;
+    }
+    
+.fr{
+    float:right;
+    }
+a{
+    text-decoration:none;
+    color: white;
+    }
+ul,li{
+    list-style:none;
+    }
+/* 头----------------------------------------------------- */
+.nav-header {
+	margin: 0px auto;
+	position: fixed;
+	z-index:99;
+	height:60px;
+	width:1920px;
+	left:0;
+	top:0;
+}
+#logo{
+	width: 476px;
+	height: 57px;
+	background: url(../icon/logo.png) no-repeat center;
+	background-size: 100%;
+}
+.head-contain {
+    position: relative;
+    width: 1920px;
+	margin: 0px auto;
+}
+.top-logo, .top-nav, .top-nav li, .top-right{
+	display:inline-block;
+    vertical-align: middle;	
+}
+.top-nav {
+	margin-left: 1134px;
+}
+.music{
+    position: absolute;
+    right: 330px;
+    top: 5px;
+    vertical-align: middle;
+}
+.top-nav li {
+	line-height:60px;
+	padding-left: 30px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.top-nav li a {
+    transition: all .5s;
+	display:block;
+	text-align:center;
+	font-size:16px;
+    font-weight: 550;
+	color:#fff;
+}
+.top-nav li a:hover{
+    color: #FF6835
+}
+.main{
+    background: url(../icon/home-w.png) no-repeat left 16px;
+    background-size: 40%;
+}
+.news{
+    background: url(../icon/news-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.login{
+    background: url(../icon/user-w.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+
+
+.main:hover{
+    background: url(../icon/home-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.news:hover{
+    background: url(../icon/news-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.login:hover{
+    background: url(../icon/user-o.png) no-repeat 0px 16px;
+    background-size: 40%;
+}
+.top-nav ul{
+    position: relative;
+}
+.main::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:11px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.news::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:96px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+.login::after{
+    content: '';
+    position:absolute;
+    bottom:0px;
+    left:180px;
+    height:2px;
+    width:0px;
+    background: #FF6835;
+    transition:all 0.5s ease;
+}
+
+.main:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.classify:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.news:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+.sales:hover:after{
+    width:109px;
+    transition:all 0.5s;
+}
+.login:hover:after{
+    width:65px;
+    transition:all 0.5s;
+}
+
+
+/* 内容***************************** */
+.slider{
+margin: 0px auto;
+background: black;   
+width: 100%;
+height: 1000px;
+position: relative;    
+}
+
+.slide{
+margin: 0px auto;
+background: #000;
+position: absolute;
+top: 0;
+left: 0;
+transform: translate3d(0,0,0);
+transition: 800ms;
+	
+}
+
+.bg{
+	/* background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+	transition: 800ms;
+}
+.bg .PageTitle{
+    z-index: 1200;
+    width: 500px;
+    margin: 0px auto;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    font-size: 30px;
+    text-align: center;
+}
+.bg .PageTitle .titleLogo{
+    display: inline-block;  
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    background-position: center;
+    background-size: cover;
+}
+.topShadow{
+	width: 100%;
+	height: 164px;
+	background: url(../销量榜/topshadow.png) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: -60px;
+	z-index: 999;
+}
+
+.queue{
+	transform: translate3d(0, 100%, 0);          
+	
+}
+
+.prev{
+	transform: translate3d(0,-50%,0);
+	
+}
+.prev .bg{
+	opacity: 0; 
+	
+}
+
+.bounce{
+	transition: 300ms;
+	
+}
+
+.slide:first-child.bounce{
+	transform: translate3d(0,10%,0);          
+} 
+.slide:last-child.bounce{
+	transform: translate3d(0,-10%,0);          
+}
+
+/* 内容通用***************************** */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    margin: 0px auto;
+}
+.smallbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px auto;
+}
+.photoBox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    animation: imgAinmation .5s ease-out;
+    display: none;
+}
+.img:first-child{
+    display: flex;
+}
+@keyframes imgAinmation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.img>div{
+    z-index: 0;
+    color:white;
+    height: 200px;
+    margin-bottom: 450px;
+	padding: 10px;
+	position: relative;
+}
+.img>div{
+	height: 300px;
+	width: 700px;
+	background-color: rgba(0, 0, 0, .6);
+    z-index: 0;
+    animation: hqAnimation .7s ease-out;
+}
+
+@keyframes hqAnimation {
+    from{
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.img>div>div{
+	display: inline-block;
+}
+
+.img>div .text{
+	position: absolute;
+	top: 15px;
+	line-height: 30px;
+	margin-left: 20px;
+	width: 470px;
+}
+.text h1{
+	margin-bottom: 20px;
+}
+.img>div .cover{
+	width: 200px;
+	height: 300px;
+	box-sizing: border-box;
+}
+
+.table{
+    width: 100%;
+    height: 164px;
+    margin-top: -165px;
+    background: url(../销量榜/bottomshadow.png) no-repeat center;
+	background-size: cover;
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.boxbtn{
+    width: 160px;
+    height: 240px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 20px;
+}
+.boxbtn>*{
+    transition: all .2s ease-out;
+}
+.boxbtn>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+}
+.boxbtn .phb{
+	z-index: 1000;
+	width: 50px;
+	height: 50px;
+	margin: -125px -23px;
+	background-size: cover;
+	box-sizing: border-box;
+}
+.boxbtn .NO1{
+	background: url(../销量榜/phb1.png) no-repeat center center;
+}
+.boxbtn .NO2{
+	background: url(../销量榜/phb2.png) no-repeat center center;
+}
+.boxbtn .NO3{
+	background: url(../销量榜/phb3.png) no-repeat center center;
+}
+.boxbtn .filterDiv{
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    overflow: hidden;
+}
+.boxbtn .filterDiv .gameType,.gamePlat,.release,.btn{
+    display: none;
+}
+.filterDiv>p{
+    font-size: 13px;
+    line-height: 28px;
+    margin-left: 17px;
+    
+}
+.filterDiv .gameType{
+    animation: coverAnimate .3s;
+}
+.filterDiv .gamePlat{
+    animation: coverAnimate .4s;
+}
+.filterDiv .release{
+    animation: coverAnimate .5s;
+}
+.filterDiv .gameType{
+    margin-top: 25px;
+}
+.filterDiv .gamePlat .plat>img{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+.filterDiv ul{
+    margin: 0px auto;
+    width: 125px;
+    margin-top: 15px;
+}
+.filterDiv ul li{
+    text-align: center;
+    width: 125px;
+    height: 30px;
+    background-color: lightgray;
+    margin-top: 5px;
+    line-height: 30px;
+    border-radius: 2px;
+    transition: all .5s;
+    cursor: pointer;
+}
+.filterDiv ul li:hover{
+    background-color: #FF6835;
+}
+.filterDiv ul li:nth-child(1){
+    animation: coverAnimate .6s;
+}
+.filterDiv ul li:nth-child(2){
+    animation: coverAnimate .7s;
+}
+.filterDiv ul li:nth-child(3){
+    animation: coverAnimate .8s;
+}
+.filterDiv ul li a{
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+.fuzzy{
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(3px);    
+}
+@keyframes coverAnimate {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* XBOX***************************** */
+.bg .PageTitle #xbox{
+    background-image: url(../icon/xbox-logo.png);
+}
+.img>div .cyber{
+	background: url(../销量榜/cyberpunk.webp) no-repeat center;
+	background-size: cover;
+}
+.img>div .witcher3{
+	background: url(../销量榜/witcher.png) no-repeat center;
+	background-size: cover;
+}
+.img>div .tombraider{
+	background: url(../销量榜/tomb2.png) no-repeat center;
+	background-size: cover;
+}
+.img>div .fifa{
+	background: url(../销量榜/FIFA23.png) no-repeat center;
+	background-size: cover;
+}
+.img>div .halo{
+	background: url(../销量榜/halocover.png) no-repeat center;
+	background-size: cover;
+}
+/* ps***************************** */
+.bg .PageTitle #playstation{
+    width: 80px;
+    background-image: url(../icon/playstation-6.png);
+}
+.img1>div .bat{
+	background: url(../销量榜/bat.webp) no-repeat center;
+	background-size: cover;
+}
+.img1>div .gow{
+	background: url(../销量榜/godOfWar.png) no-repeat center;
+	background-size: cover;
+}
+.img1>div .uncharted{
+	background: url(../销量榜/uncharted\ 4.png) no-repeat center;
+	background-size: cover;
+}
+.img1>div .ghost{
+	background: url(../销量榜/ghost.jpg) no-repeat center;
+	background-size: cover;
+}
+.img1>div .elden{
+	background: url(../销量榜/elden\ ring.jpg) no-repeat center;
+	background-size: cover;
+}
+/* steam***************************** */
+.bg .PageTitle #steam{
+    background-image: url(../icon/steam.png);
+}
+.img2>div .dmc{
+	background: url(../销量榜/dmc.webp) no-repeat center;
+	background-size: cover;
+}
+.img2>div .gtav{
+	background: url(../销量榜/gta5.png) no-repeat center;
+	background-size: cover;
+}
+.img2>div .Death{
+	background: url(../销量榜/death\ stranding.png) no-repeat center;
+	background-size: cover;
+}
+.img2>div .re{
+	background: url(../销量榜/resident\ evil2re.png) no-repeat center;
+	background-size: cover;
+}
+.img2>div .hitman{
+	background: url(../销量榜/hitman3.png) no-repeat center;
+	background-size: cover;
+}
+/* uplay***************************** */
+.bg .PageTitle #uplay{
+    background-image: url(../icon/ubisoft-logo.png);
+}
+.img3>div .Valhalla{
+	background: url(../销量榜/Valhalla.webp) no-repeat center;
+	background-size: cover;
+}
+.img3>div .rainbow6{
+	background: url(../销量榜/r6.png) no-repeat center;
+	background-size: cover;
+}
+.img3>div .crew{
+	background: url(../销量榜/thecrew.png) no-repeat center;
+	background-size: cover;
+}
+.img3>div .steep{
+	background: url(../销量榜/steep.png) no-repeat center;
+	background-size: cover;
+}
+.img3>div .farcry{
+	background: url(../销量榜/farcry.jpg) no-repeat center;
+	background-size: cover;
+}
+/* origin***************************** */
+.bg .PageTitle #origin{
+    background-size: 70%;
+    background-image: url(../icon/origin-logo.png);
+    background-repeat: no-repeat;
+}
+.img4>div .bf2042{
+	background: url(../销量榜/bf2042.webp) no-repeat center;
+	background-size: cover;
+}
+.img4>div .nfs{
+	background: url(../销量榜/nfs.png) no-repeat center;
+	background-size: cover;
+}
+.img4>div .sims{
+	background: url(../销量榜/thesims4.png) no-repeat center;
+	background-size: cover;
+}
+.img4>div .titan{
+	background: url(../销量榜/titanfall2.jpg) no-repeat center;
+	background-size: cover;
+}
+.img4>div .starwar{
+	background: url(../销量榜/jedi.png) no-repeat center;
+	background-size: cover;
+}
+/* amazon***************************** */
+.bg .PageTitle #amazon{
+    width: 144px;
+    height: 45px;
+    background-size: 100%;
+    background-image: url(../销量榜/amazon-logo.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-top: 11px;
+}
+.img5>div .metro{
+	background: url(../销量榜/metro.gif) no-repeat center;
+	background-size: cover;
+}
+.img5>div .mafia{
+	background: url(../销量榜/mob.jpg) no-repeat center;
+	background-size: cover;
+}
+.img5>div .ori{
+	background: url(../销量榜/ori.png) no-repeat center;
+	background-size: cover;
+}
+.img5>div .hollow{
+	background: url(../销量榜/hollow.png) no-repeat center;
+	background-size: cover;
+}
+.img5>div .nightmares{
+	background: url(../销量榜/LN.png) no-repeat center;
+	background-size: cover;
+}
+
+
+/* 锚点***************************** */
+.station{
+    width: 30px;
+    position: fixed;
+    right: 50px;
+    top: 220px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 5px;
+    transition: all .5s;
+}
+.station:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px black;
+    background-color: rgba(255, 255, 255, .5);
+}
+.station li{
+    margin-top: 30px;
+}
+.station li:last-child{
+    margin-bottom: 30px;
+}
+.station li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.station li .xbox{
+    background: url(../icon/xbox-logo.png) no-repeat center center;
+    background-size: cover;
+}
+.station li .ps{
+    background: url(../icon/playstation-6.png) no-repeat 0px 0px;
+    background-size: cover;
+    height: 25px;
+    width: 30px;
+}
+.station li .steam{
+    background: url(../icon/steam.png) no-repeat center center;
+    background-size: cover;
+}
+.station li .uplay{
+    background: url(../icon/ubisoft-logo.png) no-repeat center center;
+    background-size: cover;
+}
+.station li .origin{
+    background: url(../icon/origin-logo.png) no-repeat center center;
+    background-size: cover;
+    height: 40px;
+}
+.station li .amazon{
+    background: url(../icon/amazon.png) no-repeat center center;
+    background-size: cover;
+}

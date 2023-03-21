@@ -1,0 +1,245 @@
+//1rem=40px
+// @total_contentx2:750;
+// @total_contentx3:1125;
+
+html{
+    font-size: 5.333vw;//1rem=40px
+    a{
+        text-decoration: none;
+        color: rgb(0,0,0);
+    }
+    li{
+        list-style: none;
+    }
+}
+@font-face {
+    font-family: chinese-rocks;
+    src: url(../font-awesome-4.7.0/fonts/TWOFOLD-uncomplete-DeSigN-1.ttf);
+}
+
+
+//cover
+.gangs_box{
+    // width: 100%;
+    background: url("../详情页/reddead/gangs_img/gangs.jpg");
+
+    //帮派封面的外部容器
+    .gangs_cover{
+        width: 1600px;
+        // height: 600/40rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        // margin-top: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+            color:white;
+            font-size: 20px;
+            width: 1500px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        h2:nth-child(1){
+            margin-top: 50px;
+        }
+        h2{
+            font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+            color:white;
+            font-size: 65/40rem;
+            margin: 10px 0;
+        }
+        .bottom_icon{
+            position: relative;
+            i{
+                color: white;
+                display: block;
+                height: 30px;
+                font-size: 50/40rem;
+                animation: bottom_icon 2s infinite;
+                position: absolute;
+                left: 49%;
+            }
+        }
+    }
+    .gangs_people{
+        width: 100%;
+        .item{
+            width: 100%;
+            height:1070/40rem;
+            position: relative;
+            overflow: hidden;
+            .gangs_background{
+                display:none;
+            }
+            .gangs_name{
+                font-family: chinese-rocks;
+                line-height: 30px;
+                height: 30px;
+                text-align: center;
+                display: block;
+                text-align: center;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                font-size: 30px;
+                color: white;
+                position: absolute;
+                top: 15px;
+                text-shadow: 2px 2px #000, 0 0 2px #000;
+                // left: 300/40rem;
+
+            }
+            .gangs_saying{
+                font-family: chinese-rocks;
+                display:block;
+                width:1000px;
+                text-align: right;
+                // -webkit-text-stroke:1px #000;
+                // right: 0;
+                // left: 0;
+                text-shadow: 2px 2px #000, 0 0 2px #000;
+                margin: 0 auto;
+                font-size: 26px;
+                color: white;
+                position: absolute;
+                bottom: 190px;
+                right: 0;
+            }
+            .introduce{
+                background-image: url("../详情页/reddead/gangs_img/title_background.png");
+                width: 100%;
+                height: 125px;
+                background-size: cover;
+                position: absolute;
+                bottom: 0;
+                p{
+                    display: block;
+                    width: 90%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    color: white;
+                    position: absolute;
+                    bottom: 10px;
+                    font-size: 17px;
+                    text-shadow: 2px 2px #000, 0 0 2px #000;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+    //content的最外层容器！
+    .gangs_box{
+
+        //封面:cover
+        .gangs_cover{
+            
+            widows: 700px;
+            height: 700px;
+            h2{
+                font-size: 75px;
+            }
+            p{
+                font-size: 25px;
+            }
+            .bottom_icon{
+                height: 100px;
+                position: relative;
+                i{
+                    font-size: 35px;
+                    animation: bottom_icon 2s infinite;
+                    position: absolute;
+                    left: 49%;
+                }
+            }
+        }
+        //人物介绍列表最外层容器
+        .gangs_people{
+            width: 100%;
+            overflow: hidden;
+            //介绍盒子内的每一层的外面容器
+            .item{
+                width: 100%;
+                height: 1000px;
+                //PC端大于768px的时候显示此box
+                .gangs_background{
+                    width: 100%;
+                    height: 1100px;
+                    overflow: hidden;
+                    display:block;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 1000px;
+                        background-size: cover;
+                    }
+                    .gangs_people{
+                        overflow: hidden;
+                        width: 100%;
+                        img{
+                            background-repeat: no-repeat;
+                            position:absolute;
+                            top: 0;
+                            height: 1100px;
+                            width:auto;
+                            transition: all 5s;
+                            &:hover{
+                                transform:scale(1.1);
+                                filter:grayscale(70%);
+                            }
+                        }
+                    }
+                }
+                .gangs_name{
+                    font-family: chinese-rocks;   
+                    font-size: 40px;
+                    text-align: right;
+                    right: 20px;
+                    top: 20px;
+                }
+                .gangs_saying{
+                    font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+                    font-size: 40px;
+                    // top: 35%;
+                    position: absolute;
+                    right: 80px;
+                    bottom: 600px;
+                    transition: all 2s;
+
+                    &:hover{
+                        color: rgb(155, 131, 131);
+                        text-shadow: 2px 2px #000, 0 0 2px #000;
+                        // font-size: 42px;
+                    }
+                }
+                .introduce{
+
+                    p{
+                        font-family: 'Aa新华霜剑体 (非商业使用)', '楷体';
+                        font-size: 20px;
+                        position: absolute;
+                        top: 70px;
+                    }
+                }
+            }
+        }
+    }
+    @keyframes bottom_icon{
+    from {
+        bottom: 100px;
+        opacity: 1;
+    }
+    to{
+        bottom: -40px;
+        opacity: 0;
+    }
+}
+
+ 

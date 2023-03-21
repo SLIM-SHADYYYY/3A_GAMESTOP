@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 2</title>
+    <link rel="shortcut icon" href="./ico.ico" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/red-dead.css">
+    <link rel="stylesheet" href="css/dbg_gangs.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+
+    
+</head>
+
+<body>
+    <!-- 导航栏 -------------------------------------->
+    <div class="nav-header">
+        <div>
+            <div class="head-contain"><!-- logo 选项 -->
+                <a href="./game.html" class="top-logo"><img src="icon/logo.png"></a>
+                <nav class="top-nav">
+                    <ul>
+                        <li class="main"><a href="./game.html">首页</a></li>
+                        <li class="classify">
+                            <a>分类</a>   
+                        </li>
+                        <li class="news"><a href="">新闻</a></li>
+                        <li class="sales"><a href="./sales list.html">本周销量榜</a></li>
+                        <li class="login"><a href="./register.html">登录</a></li>
+                    </ul>
+                </nav>
+                <div class="top-right">
+                    <div class="searchBox"><!-- 搜索框 -->
+                        <div class="search"><img src="./icon/search-w.png" width="20px" height="20px"></div>
+                        <div class="searchinput">
+                            <input type="text" placeholder="请输入关键词">
+                        </div>
+                        <div class="close"><img src="./icon/close-wl.png" width="30px" height="30px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="classify-list">
+                <table class="first">
+                    <tr class="t-head">
+                        <th>类型</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">动作</a></td>
+                        <td><a href="">角色扮演</a></td>
+                        <td><a href="">策略</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">平台及奔跑</a></td>
+                        <td><a href="">冒险角色扮演</a></td>
+                        <td><a href="">军事</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">动作格斗及武术</a></td>
+                        <td><a href="">动作角色扮演</a></td>
+                        <td><a href="">卡牌及桌游</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">射击</a></td>
+                        <td><a href="">回合制</a></td>
+                        <td><a href="">即时战略</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">砍杀</a></td>
+                        <td><a href="">团队制</a></td>
+                        <td><a href="">回合制策略</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">第一人称射击</a></td>
+                        <td><a href="">日系角色扮演</a></td>
+                        <td><a href="">城市及定居点</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">第三人称射击</a></td>
+                        <td><a href="">策略角色扮演</a></td>
+                        <td><a href="">塔防</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">街机及节奏</a></td>
+                        <td><a href="">类 Rouge</a></td>
+                        <td><a href="">大战略及4X</a></td>
+                    </tr>
+        
+                    <tr>
+                        <td><a href="">冒险</a></td>
+                        <td><a href="">模拟</a></td>
+                        <td><a href="">体育及竞速</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">休闲</a></td>
+                        <td><a href="">农场及制作</a></td>
+                        <td><a href="">体育模拟</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">冒险角色扮演</a></td>
+                        <td><a href="">太空及飞行</a></td>
+                        <td><a href="">单人运动</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">剧情丰富</a></td>
+                        <td><a href="">建造及自动化</a></td>
+                        <td><a href="">团队体育</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">类银河战士恶魔城</a></td>
+                        <td><a href="">模拟</a></td>
+                        <td><a href="">所有运动</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">视觉小说</a></td>
+                        <td><a href="">沙盒及物理</a></td>
+                        <td><a href="">竞速</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">解迷</a></td>
+                        <td><a href="">爱好与工作</a></td>
+                        <td><a href="">竞速模拟</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">机甲</a></td>
+                        <td><a href="">生活及沉寂式</a></td>
+                        <td><a href="">钓鱼及狩猎</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- intro图 -------------------------------------->
+    <div class="intro">
+        <div class="heroes"></div>
+        <div class="heroes2">
+            <div class="heroes-text">
+                <p>
+                    美国，1899
+                    年。当警察开始打击残余亡命之徒的帮派时，蛮荒的西部时代迎来了最后的黄昏。不愿投降或是屈服的人，只有死路一条。亚瑟·摩根和范德林德帮众在黑水镇的一次抢劫行动遭遇了始料不及的意外，他们不得不逃离这个西部小镇。联邦侦探和全国顶尖的赏金猎人在他们的身后穷追不舍，亚瑟一行人必须在广袤蛮荒的美国腹地上四处劫掠、挣扎求生。而帮派内部的矛盾分化日渐加深，摆在亚瑟面前的将是他无法避免的抉择：究竟是选择自己的理想，还是选择效忠于抚养了自己的帮派。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏视频 -------------------------------------->
+    <div class="background-pic">
+        <div class="video-content">
+            <h1>游戏视频</h1>
+            <div class="video">
+                <video src="./预告/reddead.mp4" controls></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏图片 -------------------------------------->
+    <div class="background-pic">
+        <div class="pic-content">
+            <h1>游戏截图</h1>
+            <div class="pic">
+                <div class="banner">
+                    <div class="box"><!-- 大图 -->
+                        <div class="photoBox">
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 1.jpg);">   
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 2.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 3.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 4.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 5.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 6.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 7.jpg);">
+                            </div>
+                            <div class="img" style="background-image: url(./详情页/reddead/red\ dead\ 8.jpg);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box"><!-- 小图 -->
+                        <div class="table">
+                            <div class="boxbtn boxbtnHover">
+                                <img src="./详情页/reddead/red dead 1.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 2.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 3.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 4.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 5.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 6.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 7.jpg" width="1600px" height="800px">
+                            </div>
+                            <div class="boxbtn">
+                                <img src="./详情页/reddead/red dead 8.jpg" width="1600px" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 范德林帮 -------------------------------------->
+    <div class="gangs_box">
+        <div class="gangs_cover">
+            <h2><范德林德帮派></h2>
+            <p>
+                这是一个由亡命之徒、反叛者和不容于社会的人组成的，因魅力非凡的理想主义者达奇·范德林德而聚集在一起的帮派。 
+                他们选择了逍遥法外的生活之道，而现在，恐惧着法律或许将要终结他们这样的生活。
+            </p>
+            <h2>亡命生涯</h2>
+            <div class="bottom_icon">
+                <i class="fa fa-angle-double-down"></i>
+            </div>
+        </div>
+        <!-- 开始人物介绍 -->
+
+        <div class="gangs_people">
+            
+            <!-- 1:达奇 -->
+
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" class="lazy" data-original="./详情页/reddead/gangs_img/background1.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" class="lazy" data-original="./详情页/reddead/gangs_img/gangs_people1.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Dutch Van Der Linde</h3>
+            <h3 class="gangs_saying">"他们对我们紧追不舍，因为我们代表着他们所惧怕的一切。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    这一大群亡命之徒、反叛者和不容于社会的人的首领，心怀理想、无视法律、
+                    魅力四射、饱读诗书、潇洒恣意，不过面对步步紧逼的现代社会，他可能已经开始走向疯狂。
+                </p>
+            </div>
+           </div>
+           <!-- 2 亚瑟摩根 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/gangs_img/background23.jpg" class="lazy" data-original="./详情页/reddead/gangs_img/background23.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" class="lazy" data-original="./详情页/reddead/gangs_img/gangs_people23.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Arthur Morgan</h3>
+            <h3 class="gangs_saying">"我们是一群盗贼，游荡在这个不再需要我们的世界上。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    他从小就是达奇最为可靠和最为得力的干将，当一个亡命徒是亚瑟唯一熟悉的生活方式。
+                    机敏、沉着、无情，但他有自己的荣誉感，也是一个总是能完成任务的男人。
+                </p>
+            </div>
+           </div>
+           <!-- 3 河西阿 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" class="lazy" data-original="./详情页/reddead/gangs_img/background2.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people2.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Hosea Matthews</h3>
+            <h3 class="gangs_saying">"我希望我能以更少的代价换取智慧。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    何西阿是一名骗术大师、绅士和小偷，在过去超过二十年的时间里，他一直都是达奇最为亲密的朋友和左膀右臂。
+                    他才智过人，思路敏捷，无论是任何事，他都有自己的一套方法可以侃侃而谈。
+                </p>
+            </div>
+           </div> 
+            <!-- 4 莫莉 -->
+            <div class="item">
+                <div class="gangs_background">
+                    <img src="./详情页/reddead/background.jpg" class="lazy" data-original="./详情页/reddead/gangs_img/background3.jpg">
+                    <div class="gangs_people">
+                        <img src="./详情页/reddead/load.webp" class="lazy" data-original="./详情页/reddead/gangs_img/gangs_people3.png">
+                    </div>
+                </div>
+    
+                <h3 class="gangs_name">Molly O’Shea</h3>
+                <h3 class="gangs_saying">"你在玩一个危险的游戏。"</h3>
+                   <!-- ----- -->
+                <div class="introduce">
+                    <p>
+                        一名来自都柏林的姑娘，也是达奇的心仪对象，至少现在还是。莫莉在颠沛流离的生活中太过敏感，而这一切开始使她心力交瘁。
+                    </p>
+                </div>
+           </div>
+           <!-- 5 苏珊 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background4.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people4.png">
+                </div>
+            </div>
+
+
+            <h3 class="gangs_name">Susan Grimshaw</h3>
+            <h3 class="gangs_saying">"我敢说，要是没人约束你们，你们至少有一半人会自取灭亡。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    帮派阵营中无可置疑的权威，公义的仲裁者。如果没有苏珊在管理，所有的一切早在几年前就崩溃了。她顽强而坚定，不会容忍任何人胡作非为。
+                </p>
+            </div>
+           </div>
+           <!-- 6 皮尔逊 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background5.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people5.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Pearson</h3>
+            <h3 class="gangs_saying">"大家都很高兴，也都吃得很饱。我想也许我们会没事的。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    皮尔逊是营地中的屠夫和厨子，他曾在海军中短暂地服役，这段经历的点点滴滴都是他钟爱的谈资。一个大嗓门、乐呵呵的堕落者，似乎有点不愿正视生活的转变。
+                </p>
+            </div>
+           </div>
+           <!-- 7 迈卡·贝尔 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background6.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people6.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Micah Bell</h3>
+            <h3 class="gangs_saying">"我认为这世上的人分为赢家和输家……其他什么都没了。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一名职业罪犯和雇佣杀手。兽性难驯，难以预料，但他的生活都是为了行动。
+                </p>
+            </div>
+           </div>
+           <!-- 8 查尔斯 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background7.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people7.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Charles Smith</h3>
+            <h3 class="gangs_saying">"我们结下这么多仇家，不可能会平安无事的。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    查尔斯是帮派中最近加入的新人，沉默寡言，但能轻松胜任他所做的任何事情，在战斗中几乎是无人可敌。正直可靠，但也非常危险。
+                </p>
+            </div>
+           </div>
+           <!-- 9 Bill Williamson -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background8.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people8.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Bill Williamson</h3>
+            <h3 class="gangs_saying">"别指望干任何傻事，否则不要怪我的枪没长眼睛。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一名被军队除名的退伍军人，或许已经身败名裂。他的性格冲动，喜欢先动手再思考。但他是个狠角色，办事毫无保留，时刻准备着战斗。
+                </p>
+            </div>
+           </div>
+           <!-- 10 施劳特斯 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background9.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people9.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Leopold Strauss</h3>
+            <h3 class="gangs_saying">"外面的世界很险恶，而我们就快无路可逃了……"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    施特劳斯先生一开始来自于奥地利，负责保管该团伙的账目，同时经营着他们的放贷业务。他是一个不苟言笑、有点狡猾、不讲感情的人，拥有高利贷债主需要的所有品质。
+                </p>
+            </div>
+           </div>
+           <!-- 11约翰 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background10.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people10.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">John Marston</h3>
+            <h3 class="gangs_saying">"我猜我现在剩下的就只有怀疑。怀疑还有伤疤。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    约翰曾经是一个流落街头的孤儿，一直以来，他不得不依靠自己的智慧生活，十二岁时被达奇所收留。精明、勇敢、坚强，他和亚瑟是达奇最骄傲的门徒。
+                </p>
+            </div>
+           </div>
+           <!-- 12 艾比盖尔 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background11.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people11.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Abigail Roberts</h3>
+            <h3 class="gangs_saying">"要是他们敢动他一根毫毛，我发誓，我会亲手让他们下地狱。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一个在西部小酒吧和妓院里谋生的孤儿，艾比盖尔是一个坚强、直言不讳的女人，她见过很多且知道如何在不幸的情况下生存。
+                </p>
+            </div>
+           </div>
+           <!-- 13杰克 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background12.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people12.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Jack Marston</h3>
+            <h3 class="gangs_saying">"你抓到那些坏蛋了吗？"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    年幼的杰克在帮派中长大，虽然每个人都尽力保护他免受于邪恶元素的影响，特别是他的母亲艾比盖尔。他热爱关于自然的一切和户外生活，并且被他的许多阿姨和叔叔小心关照着。
+                </p>
+            </div>
+           </div>
+           <!-- 14 Karen Jones -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background13.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people13.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Karen Jones</h3>
+            <h3 class="gangs_saying">"欺诈、抢银行、打劫富人等等可怕的事情。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一个完美的诈骗艺术家，这个毛躁的女人几乎可以把任何一个在酒桌上的人喝趴下。她大胆、欢乐，热爱亡命之徒的生活，一心一意只想过这种日子。
+                </p>
+            </div>
+           </div>
+           <!-- 15 哈维尔 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background14.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people14.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Javier Escuella</h3>
+            <h3 class="gangs_saying">"非战不可那我们就战个痛快，非逃不可那我们就溜之大吉，非死不可那我们就视死如归，不管怎样我们永远都是自由的。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    作为一个臭名昭著的赏金猎人和革命家，哈维尔一下子就与达奇的理念产生了强烈的共鸣。他付出了自己的全部身心，充满热情而且忠心耿耿。
+                </p>
+            </div>
+           </div>
+           <!-- 16 帝莉 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background15.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people15.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Tilly Jackson</h3>
+            <h3 class="gangs_saying">"总的来看，我们多数人都是在饥饿、恐惧和孤单中长大的。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    蒂莉从十二岁起就成为了一名亡命之徒，她在加入达奇之前一直与另外一个帮派生活。她头脑精明，适应力强，值得依靠，有照料自己的能力也有表达自身想法的勇气。
+                </p>
+            </div>
+           </div>
+           <!-- 17 Uncle 大叔 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background16.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people16.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Uncle</h3>
+            <h3 class="gangs_saying">"这就像人们说我懒一样，我不懒，我只是不喜欢干活而已。这是两码事。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    大叔是个善于阿谀奉承，热衷于享乐的人，当威士忌打开时，他总会出现在旁边，而当需要完成任何工作的时候，大叔永远不会现身。如果他不是那么逗趣，达奇几年前就会把他甩掉。
+                </p>
+            </div>
+           </div>
+           <!-- 18 玛丽贝斯 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background17.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people17.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Mary-Beth Gaskill</h3>
+            <h3 class="gangs_saying">"先生们，我想我得到了好消息。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一个善良、和蔼的年轻女人，这让她成为了完美的罪犯。当人们意识到他们被骗了的时候，玛丽贝思已经带着钱回家了。
+                </p>
+            </div>
+           </div>
+           <!-- 19 蓝尼 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background18.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people18.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Lenny Summers</h3>
+            <h3 class="gangs_saying">"在这里自由地生活，就像现在这样……我已别无他求。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    年轻的蓝尼在十五岁时杀死了谋杀他父亲的男人，之后的岁月里他一直四处流亡。他是个聪明小伙，颇有教养，能力出色而且心怀大志，时刻准备着干好自己的活。
+                </p>
+            </div>
+           </div>
+           <!-- 20 特里劳尼 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background19.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people19.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Josiah Trelawny</h3>
+            <h3 class="gangs_saying">"爱情怎么会是愚蠢的呢？这是我们仅有的一切了。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    特里劳尼是一个浮夸的巫师、老千和骗子，很难摸透他的行踪，但他总能告诉他们不错的线索。
+                </p>
+            </div>
+           </div>
+           <!-- 21 斯旺森 -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background20.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people20.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Reverend Swanson</h3>
+            <h3 class="gangs_saying">"我遭受着真正的痛苦折磨，我失去了一切，失去了我的神职、信仰、家人……"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    斯旺森曾是一位牧师，他现在被放纵的欲望所控制，远远没有达成自己昔日所设立的要求。如果不是他从前救过达奇一命，帮派很可能不会让他待这么久。
+                </p>
+            </div>
+           </div>
+           <!-- 22 Sean MacGuire -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background21.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people21.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Sean MacGuire</h3>
+            <h3 class="gangs_saying">"交给我好了，一块白布我也能给你说出花来。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一个自大的爱尔兰年轻男人、小偷和路匪，出身于一个罪犯和异党家庭。他总是想要出一份力，并且对自己很自信……或许太自信了。
+                </p>
+            </div>
+           </div>
+           <!-- 23 Sadie Adler -->
+           <div class="item">
+            <div class="gangs_background">
+                <img src="./详情页/reddead/background.jpg" data-original="./详情页/reddead/gangs_img/background22.jpg">
+                <div class="gangs_people">
+                    <img src="./详情页/reddead/load.webp" data-original="./详情页/reddead/gangs_img/gangs_people22.png">
+                </div>
+            </div>
+
+            <h3 class="gangs_name">Sadie Adler</h3>
+            <h3 class="gangs_saying">"没有谁能再夺走我的任何东西。"</h3>
+               <!-- ----- -->
+            <div class="introduce">
+                <p>
+                    一个寡妇，她一心想要报复当初杀害她丈夫的凶手。这个女人出手凶狠，不惧怕任何事和任何人。这个女人是个不好惹的对象，但她对自己所爱护的人非常忠诚。
+                </p>
+            </div>
+           </div>
+        </div>
+    <!-- <div class="background-pic"> -->
+        <!-- <div class="pic-content">
+            <h1>范德林帮派</h1>
+            <div class="VanDerLinde">
+                <div class="character Dutch"></div>
+                <div class="character Hosea"></div>
+                <div class="character Molly"></div>
+                <div class="character Susan"></div>
+                <div class="character Pearson"></div>
+                <div class="character Micah"></div>
+                <div class="character Charles"></div>
+                <div class="character Bill"></div>
+                <div class="character Leopold"></div>
+                <div class="character John"></div>
+                <div class="character Abigail"></div>
+                <div class="character Jack"></div>
+                <div class="character Karen"></div>
+                <div class="character javier"></div>
+                <div class="character Tilly"></div>
+                <div class="character Uncle"></div>
+                <div class="character Mary-Beth"></div>
+                <div class="character Lenny"></div>
+                <div class="character Josiah"></div>
+                <div class="character Reverend"></div>
+                <div class="character Sean"></div>
+                <div class="character Sadie"></div>
+                <div class="character Arthur"></div>
+            </div>
+        </div>    
+    </div> -->
+
+    <!-- 游戏特色 -------------------------------------->
+    <div class="background-pic" style="height: 1600px;">
+        <div class="pic-content">
+            <h1>游戏特色</h1>
+            <div class="feature">
+                <div class="feature-cover cover1 fl"></div>
+                <div class="feature-text fr">
+                    <p>
+                        荒野大镖客2PC 版借助全新图形和技术改进以增强沉浸感，并充分利用了电脑强大的性能，使这个庞大、丰富而细致的世界的每个角落都栩栩如生。包括更广的渲染距离；为改良的昼夜照明而提供的更高质量的全局照明和环境光遮蔽；改良的反射和所有距离提供更深、更高分辨率的阴影；细分曲面处理树木纹理并改善草地和毛皮纹理，使所有植物和动物都更加逼真。
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-cover cover2 fl"></div>
+                <div class="feature-text fr">
+                    <p>
+                        荒野大镖客2是迄今为止最高水准的大型开放世界游戏。它对细节的打磨吹毛求疵，对内容的填充扎实稳重，故事的讲述娓娓动人。和前作及GTA5相比本作不但有全方位提升，在互动体验的打磨上更上一层楼，创造出一个内在运行逻辑能够自洽的虚拟社会，足以让人沉浸数周、数月、甚至数年，绝对有资格进入史上最伟大作品行列。
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-cover cover3 fl"></div>
+                <div class="feature-text fr">
+                    <p>
+                        荒野大镖客2不仅有着沉浸式的游戏打法，它还有着扣人心弦的故事情节、制作精良的角色、完美无瑕的设计或让人欲罢不能的多人游戏模式。这款游戏故事情节丰富无比，它像所有肥皂剧一样引人入胜，和优秀剧本一样精雕细琢，能让我们有所感触。
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-cover cover4 fl"></div>
+                <div class="feature-text fr">
+                    <p>
+                        荒野大镖客2PC 版也囊括了额外的故事模式内容，包括悬赏任务、帮派藏身处、武器及更多；还可免费享受在 Red Dead 在线模式中与众多玩家共享逼真世界，包含所有此前发布的改进内容及最新的内容更新，为您提供完整的在线游戏体验，包括像赏金猎人、商贩和收藏家这样的边境专家职业及更多。
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- 游戏配置 -------------------------------------->
+    <div class="background-pic" style=" height: 1150px;">
+        <div class="configuration-intro">
+            <div class="frame"></div>
+        </div>
+
+        <div class="pic-content" style=" height: 500px;">
+            <h1>游戏配置</h1>
+            <div class="configuration low fl">
+                <ul>
+                    <li>最低配置:</li>
+                    <li>需要 64 位处理器和操作系统</li>
+                    <li>操作系统: Windows 10 - April 2018 Update (v1803)</li>
+                    <li>处理器: Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</li>
+                    <li>内存: 12 GB RAM</li>
+                    <li>显卡: Nvidia GeForce GTX 1060 6GB / AMD </li>
+                    <li>Radeon RX 480 4GB</li>
+                    <li>网络: 宽带互联网连接</li>
+                    <li>存储空间: 需要 150 GB 可用空间</li>
+                    <li>声卡: Direct X Compatible</li>
+                </ul>
+            </div>
+            <div class="configuration high fr">
+                <ul>
+                    <li>推荐配置:</li>
+                    <li>需要 64 位处理器和操作系统</li>
+                    <li>操作系统: Windows 10 - April 2018 Update (v1803)</li>
+                    <li>处理器: Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</li>
+                    <li>内存: 12 GB RAM</li>
+                    <li>显卡: Nvidia GeForce GTX 1060 6GB / AMD </li>
+                    <li>Radeon RX 480 4GB</li>
+                    <li>网络: 宽带互联网连接</li>
+                    <li>存储空间: 需要 150 GB 可用空间</li>
+                    <li>声卡: Direct X Compatible</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -------------------------------------->
+    <div class="footer">
+        <div class="footer-top"></div>
+        <span>亡命生涯</span>
+        <div class="footer-middel">
+            <div class="footer_level">
+                <img src="https://www.rockstargames.com/reddeadredemption2/dist/img/zh_hans/a5daaafe88a6e50e3e6409402a04b4fa.svg">
+            </div>
+            <div class="footer_logo">
+                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyMTYgMTk4LjYyNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjE2IDE5OC42MjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMTQuNTQ4LDE5Ny4xNjZjLTAuOTU4LDAuOTc0LTIuMTI4LDEuNDU3LTMuNSwxLjQ1N2MtMS4zNzEsMC0yLjU0MS0wLjQ4My0zLjQ5LTEuNDU3DQoJCWMtMC45NTUtMC45NjMtMS40NDItMi4xMjgtMS40NDItMy41MDFjMC0xLjM2MSwwLjQ4Ny0yLjUyNSwxLjQ0OC0zLjQ5MWMwLjk2My0wLjk1OCwyLjEyNS0xLjQzNywzLjQ4NC0xLjQzNw0KCQljMS4zNzIsMCwyLjU0MiwwLjQ3OSwzLjUsMS40MzdjMC45NjgsMC45NjYsMS40NTIsMi4xMjQsMS40NTIsMy40OTFDMjE2LDE5NS4wMjksMjE1LjUxNiwxOTYuMjAzLDIxNC41NDgsMTk3LjE2NnoNCgkJIE0yMDguMDI3LDE5MC42NjJjLTAuODIsMC44MzItMS4yMzIsMS44MzYtMS4yMzIsMy4wMDZjMCwxLjE4MiwwLjQwMiwyLjE4OSwxLjIzMiwzLjAyYzAuODMzLDAuODM4LDEuODI1LDEuMjU0LDMuMDIxLDEuMjU0DQoJCWMxLjE4NiwwLDIuMTkyLTAuNDE2LDMuMDItMS4yNTRjMC44MTgtMC44MzEsMS4yMzMtMS44MzgsMS4yMzMtMy4wMmMwLTEuMTctMC40MTUtMi4xNzQtMS4yMzMtMy4wMDYNCgkJYy0wLjgzOC0wLjgyNy0xLjgzNC0xLjI0Ni0zLjAyLTEuMjQ2QzIwOS44NzQsMTg5LjQxNiwyMDguODYyLDE4OS44MzUsMjA4LjAyNywxOTAuNjYyeiBNMjEwLjk1MywxOTAuOTM5DQoJCWMwLjY4MiwwLDEuMTgxLDAuMDY2LDEuNDk0LDAuMmMwLjU2NiwwLjIzNiwwLjg0MywwLjY5MiwwLjg0MywxLjM3NmMwLDAuNDgzLTAuMTY0LDAuODQ3LTAuNTMxLDEuMDc3DQoJCWMtMC4xODcsMC4xMTMtMC40NTEsMC4yMDctMC43ODMsMC4yNTljMC40MjcsMC4wNjUsMC43MzIsMC4yMzksMC45MzEsMC41MjdjMC4xOTUsMC4yODgsMC4zLDAuNTY0LDAuMywwLjgzNHYwLjM5NQ0KCQljMCwwLjEyOSwwLjAxLDAuMjYzLDAuMDE0LDAuNDA5YzAsMC4xNDUsMC4wMjEsMC4yMzEsMC4wMzMsMC4yNzZsMC4wMzcsMC4wNjloLTAuODg2Yy0wLjAwMi0wLjAxMy0wLjAwMi0wLjAzOC0wLjAxMi0wLjA0OA0KCQljMC0wLjAyMS0wLjAwOC0wLjAzOC0wLjAwOC0wLjA2NmwtMC4wMjEtMC4xNjl2LTAuNDI0YzAtMC42MjYtMC4xNy0xLjA0Ni0wLjUyNS0xLjIzOWMtMC4yMDMtMC4xMTQtMC41NTYtMC4xNzUtMS4wNjYtMC4xNzUNCgkJaC0wLjc2N3YyLjEyMWgtMC45NTF2LTUuNDIzSDIxMC45NTN6IE0yMTEuOTg4LDE5MS44MjVjLTAuMjM0LTAuMTM3LTAuNjEyLTAuMjAxLTEuMTU2LTAuMjAxaC0wLjgyN3YxLjk0MWgwLjg2OQ0KCQljMC40MDgsMCwwLjcxOC0wLjAzOCwwLjkyNC0wLjEyN2MwLjM3OS0wLjEzNywwLjU2NS0wLjQyLDAuNTY1LTAuODNDMjEyLjM2MywxOTIuMjE1LDIxMi4yMzksMTkxLjk1OSwyMTEuOTg4LDE5MS44MjV6Ii8+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNzguNDMsMEgzOC4yNjJDMTcuMTY1LDAsMCwxNi42NTUsMCwzNy4xMTZ2MTI0LjUxMWMwLDIwLjc0NywxNi42NDgsMzYuOTk5LDM3LjkxNSwzNi45OTloMTQwLjE2MQ0KCQkJYzIxLjI2NywwLDM3LjkyNC0xNi4yNTIsMzcuOTI0LTM2Ljk5OVYzNy4xMTZDMjE2LDE2LjMwNiwxOTkuNTAyLDAsMTc4LjQzLDB6Ii8+DQoJPC9nPg0KCTxwYXRoIGQ9Ik0xNzguNDMsNC4yNTVIMzguMjYyYy0xOS4wNjUsMC0zNC4wMDgsMTQuNDI2LTM0LjAwOCwzMi44NTRMNC4yNTMsMTYxLjYyYzAsMTguMzY0LDE0Ljc5MSwzMi43NDYsMzMuNjYyLDMyLjc0NmgxNDAuMTYxDQoJCWMxOC44ODEsMCwzMy42NjctMTQuMzgyLDMzLjY2Ny0zMi43NDZWMzcuMTA4QzIxMS43NDMsMTguNjgxLDE5Ny4xMDgsNC4yNTUsMTc4LjQzLDQuMjU1eiIvPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xODUuNDk0LDExOC4yMDRoLTI3LjA2MmwtNC4yOTItMjYuOTc5bC0xNS44NTgsMjYuNzloLTIuOTY2Yy0xLjc5OS0zLjEwMS0yLjUxMy03LjY0Mi0yLjUxMy0xMC40Mg0KCQljMC00LjYwOCwwLjMzMi05LjEwNCwwLjMzMi0xNC45NTJjMC03Ljc1OC0yLjI3OS0xMS45MjEtOC4zNjUtMTMuMzg0di0wLjIzYzEyLjk0Mi0xLjc5OSwxOC44MS0xMC4zNjEsMTguODEtMjIuNDE2DQoJCWMwLTE3LjEyNi0xMS4zOTQtMjAuODQxLTI2LjMyMy0yMC44NDFINzcuMDgzbC0xNi45NzcsODAuMzk2aDIxLjM0OGw2LjE3OS0yOS4yNTNoMTQuMTkxYzcuNTY4LDAsMTAuNjY1LDMuNzA2LDEwLjY2NSwxMC43OTMNCgkJYzAsNS4zOTItMC41NjIsOS42NjEtMC41NjIsMTMuODE1YzAsMS41MzUsMC4zNDgsNS4xMDUsMS4zODYsNi40OTFjLTAuMDEzLDAsMTUuNDMxLDE2LjI4NCwxNS40MzEsMTYuMjg0bC0xMy4yNzcsMjguNTQ4DQoJCWMwLDAsMCwwLDI4LjM5Ny0xNi44NzFsMjEuMTU5LDE2LjI1NmwtMy45NDktMjYuOTM1TDE4NS40OTQsMTE4LjIwNHogTTEwOC4yMDMsNzEuODYzSDkxLjIzNGw0LjA2NC0xOS4zODFoMTUuNzg4DQoJCWM1LjYyMSwwLDExLjQ2NywxLjQ2MiwxMS40NjcsOC4zNDFDMTIyLjU1NCw2OS40OTMsMTE1Ljg5Niw3MS44NjMsMTA4LjIwMyw3MS44NjN6IE0xNDQuMTU4LDE0MS4yMzRsLTE5Ljc3OCwxMS43NDJsOS4wNTQtMTkuNDQNCgkJbC0xMS4wMDktMTEuNTk0aDE4LjEwMWwxMS40NDktMTkuMzQzbDMuMTAyLDE5LjUzM2gxNy45NTlsLTE2LjE5MSwxMS4zMjlsMi44OTMsMTkuNzUyTDE0NC4xNTgsMTQxLjIzNHoiLz4NCjwvZz4NCjwvc3ZnPg0K">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/red-dead.js"></script>
+<script>
+    $(function (){
+        $("img").lazyload({ 
+        effect: "fadeIn"
+        }); 
+
+    })
+</script>
+
+</html>
